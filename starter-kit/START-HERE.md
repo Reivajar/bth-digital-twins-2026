@@ -19,7 +19,7 @@ If you see a blank page, try Chrome or Edge. If it is still blank, tell Javier i
 | `data/context.js` | Water and parks for the background | No |
 | `lib/` | The map library | No |
 | `docs/PROMPTS.md` | Prompts to start each project option | Read it |
-| `docs/DATA.md` | What each data field means and how reliable it is | Read it before writing your brief |
+| `docs/DATA.md` | What each data field means and how reliable it is | Read it before writing your specification |
 | `docs/requirement-brief-template.docx` | Template for your main deliverable | Yes, this is where your grade comes from |
 
 ## 3. How to change it with AI

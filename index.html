@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Digital Twins for Urban Planning — BTH</title>
 <meta name="description" content="One-week module on digital twins in the Master in Sustainable Urban Planning and Design at Blekinge Institute of Technology, 9–13 November 2026.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BTH · Master in Sustainable Urban Planning and Design">
+<meta property="og:title" content="Digital twins for urban planning · BTH, 9–13 Nov 2026">
+<meta property="og:description" content="One week on what digital twins are, what Swedish municipalities actually have, and how to specify one worth building.">
+<meta property="og:url" content="https://reivajar.github.io/bth-digital-twins-2026/">
+<meta property="og:image" content="https://reivajar.github.io/bth-digital-twins-2026/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Digital twins for urban planning, BTH, 9–13 November 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital twins for urban planning · BTH, 9–13 Nov 2026">
+<meta name="twitter:description" content="One week on what digital twins are, what Swedish municipalities actually have, and how to specify one worth building.">
+<meta name="twitter:image" content="https://reivajar.github.io/bth-digital-twins-2026/assets/og-card.png">
+<meta name="theme-color" content="#5531FF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -53,7 +67,7 @@ i.ri{font-style:normal}
 /* ---------- top bar ---------- */
 .bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 0;border-bottom:2px solid var(--ink);font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
 .bar span{display:flex;align-items:center;gap:.5rem}
-.bar .dot{width:.7rem;height:.7rem;border-radius:50%;background:var(--lime);box-shadow:0 0 0 2px var(--ink)}
+.bar .dot{flex:none;width:.7rem;height:.7rem;aspect-ratio:1;border-radius:50%;background:var(--lime);box-shadow:0 0 0 2px var(--ink)}
 
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:repeat(12,1fr);gap:0 2rem;padding:4.5rem 0 3rem}
@@ -87,6 +101,15 @@ i.ri{font-style:normal}
 @media (max-width:860px){.sec{padding:3rem 0}.sec-head,.sec-body{grid-column:1/-1}.sec-head{margin-bottom:1.5rem}}
 .sec-num{font-size:.8rem;font-weight:700;letter-spacing:.08em;color:var(--violet);display:flex;align-items:center;gap:.5rem}
 .sec-num i{font-size:1.15rem}
+.sec-toggle{all:unset;cursor:pointer;display:block;width:100%;border-radius:8px}
+.sec-toggle:focus-visible{outline:2px solid var(--violet);outline-offset:4px}
+.sec-toggle h2{display:inline}
+.sec-toggle .sec-chev{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;margin-top:.75rem;border:1px solid var(--rule);border-radius:50%;color:var(--violet);font-size:1.2rem;transition:transform .2s}
+.sec.collapsed .sec-chev{transform:rotate(-90deg)}
+.sec.collapsed .sec-body{display:none}
+.sec.collapsed{padding:1.6rem 0}
+.sec.collapsed .sec-head{margin-bottom:0}
+@media (prefers-reduced-motion: reduce){.sec-toggle .sec-chev{transition:none}}
 h2{font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1;letter-spacing:-.035em;font-weight:700;margin:.6rem 0 0}
 h3{font-size:1.25rem;letter-spacing:-.015em;font-weight:700;margin:2.75rem 0 .9rem;display:flex;align-items:center;gap:.55rem}
 h3:first-child{margin-top:0}
@@ -134,7 +157,7 @@ h4{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercas
 .card dt{font-weight:700;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}
 .card dd{margin:0}
 
-/* ---------- brief structure ---------- */
+/* ---------- specification structure ---------- */
 .steps{list-style:none;padding:0;margin:0 0 1rem;counter-reset:s}
 .steps li{counter-increment:s;display:grid;grid-template-columns:2.6rem 1fr;gap:.75rem;padding:.8rem 0;border-top:1px solid var(--rule);margin:0;max-width:none}
 .steps li::before{content:counter(s);width:2rem;height:2rem;border-radius:50%;border:2px solid var(--violet);color:var(--violet);display:grid;place-items:center;font-weight:700;font-size:.85rem}
@@ -239,8 +262,8 @@ footer p{margin:0}
   <p class="standfirst">What digital twins are, what Swedish municipalities actually have, and how to specify something worth building.</p>
   <dl class="facts">
     <div><dt><i class="ri-calendar-line"></i>Dates</dt><dd>9–13 November 2026</dd></div>
-    <div><dt><i class="ri-map-pin-2-line"></i>Where</dt><dd>Monday online, Tue–Fri campus</dd></div>
-    <div><dt><i class="ri-file-text-line"></i>Deliverable</dt><dd>Pre-requirement brief + one-screen prototype</dd></div>
+    <div><dt><i class="ri-map-pin-2-line"></i>Where</dt><dd>Monday online, Tuesday hybrid, Wed–Fri campus</dd></div>
+    <div><dt><i class="ri-file-text-line"></i>Deliverable</dt><dd>Requirements specification + a limited mockup</dd></div>
     <div><dt><i class="ri-timer-flash-line"></i>Due</dt><dd>Friday 13 Nov, 17:00</dd></div>
   </dl>
 </header>
@@ -256,7 +279,7 @@ footer p{margin:0}
     </ul>
   </div>
   <div class="day">
-    <div class="day-name">Tuesday <span class="day-mode">Campus PM</span></div>
+    <div class="day-name">Tuesday <span class="day-mode">Hybrid</span></div>
     <div class="day-num">10</div>
     <ul>
       <li><b>Morning</b>Readings, on your own</li>
@@ -277,7 +300,7 @@ footer p{margin:0}
     <div class="day-num">12</div>
     <ul>
       <li><b>11:30</b>Checkpoint, scope freezes</li>
-      <li><b>Afternoon</b>AI comparison, draft the brief</li>
+      <li><b>Afternoon</b>AI comparison, draft the specification</li>
     </ul>
   </div>
   <div class="day">
@@ -310,15 +333,15 @@ footer p{margin:0}
   <div class="sec-head"><div class="sec-num"><i class="ri-compass-3-line"></i>01</div><h2>About the week</h2></div>
   <div class="sec-body">
     <p class="lede">Most of you will never build a digital twin. You will commission one, write the requirements for it, sit in the meeting where a supplier explains what it can do, and decide whether that is true.</p>
-    <p>That is what this week prepares you for. We start from the concepts, hear the national vision, and then hear what one Swedish municipality, Helsingborg, actually has today. You then specify one function of a municipal city model and build a rough prototype of it, so that your specification rests on what the data allows rather than on what a rendering promises.</p>
+    <p>That is what this week prepares you for. We start from the concepts, hear the national vision, and then hear what one Swedish municipality, Helsingborg, actually has today. You then specify one function of a municipal city model and build a limited mockup of it, so that your specification rests on what the data allows rather than on what a rendering promises.</p>
     <p>No programming background is assumed. You work on top of a prepared 3D city model, and AI-assisted coding is part of the method, not a shortcut around it.</p>
     <h4>By Friday you should be able to</h4>
     <ol class="obj">
       <li>Tell a digital model, a digital shadow and a digital twin apart, and say which one a given system actually is.</li>
       <li>Describe digital twin practice in Swedish municipalities, and the gap between research, national vision and municipal reality.</li>
       <li>Identify who a function is for, which decision it supports, and which data it depends on.</li>
-      <li>Write a pre-requirement brief a municipality could build a procurement specification from.</li>
-      <li>Build a rough prototype of one function, and report honestly on what it does not show.</li>
+      <li>Write a requirements specification a municipality could build a procurement specification from.</li>
+      <li>Build a limited mockup of one function or user journey, and report honestly on what it does not show.</li>
       <li>Judge a digital twin proposal critically: maintenance, ownership, and what the model leaves out.</li>
     </ol>
   </div>
@@ -345,7 +368,7 @@ footer p{margin:0}
     </div>
 
     <div class="sched-day">
-      <h3><i class="ri-building-2-line"></i>Tuesday 10 November</h3>
+      <h3><i class="ri-building-2-line"></i>Tuesday 10 November · hybrid <span class="tbc">likely, TBC</span></h3>
       <div class="slot"><p class="slot-when">Morning</p><p class="slot-what"><b>Readings, on your own</b><span>Start with the first required reading. Report any starter-kit problem in the course channel.</span></p></div>
       <div class="slot key"><p class="slot-when">13:30–15:00</p><p class="slot-what"><b>Municipal practice: Helsingborg</b><span>Trine Nykjär (Stadsbyggnadsförvaltningen) and Magnus (3D coordination). What Helsingborg actually has, why it is not yet a twin, "digital cousins", Gaussian splatting, and the Smart stad pre-study. Come with questions.</span></p></div>
       <div class="slot"><p class="slot-when">15:15–16:45</p><p class="slot-what"><b>Guided vibecoding</b><span>In your group: make one change to the worked example, break it, go back to the last saved copy, and write your first build-log entry.</span></p></div>
@@ -363,14 +386,14 @@ footer p{margin:0}
       <div class="slot"><p class="slot-when">09:15–11:30</p><p class="slot-what"><b>Build</b><span>Improve version 0 and keep the build log.</span></p></div>
       <div class="slot key"><p class="slot-when">11:30–12:15</p><p class="slot-what"><b>Checkpoint</b><span>Three minutes per group: real, synthetic or not working, and what went wrong. Scope freezes here.</span></p></div>
       <div class="slot"><p class="slot-when">13:15–14:00</p><p class="slot-what"><b>AI comparison</b><span>Ask a general AI model what your municipality should build, and note where it is generic or wrong about Swedish municipal conditions.</span></p></div>
-      <div class="slot"><p class="slot-when">14:00–16:30</p><p class="slot-what"><b>Draft the brief and the presentation</b><span>No new features after 14:00. Write most of the brief while help is in the room.</span></p></div>
+      <div class="slot"><p class="slot-when">14:00–16:30</p><p class="slot-what"><b>Draft the specification and the presentation</b><span>No new features after 14:00. Write most of the specification while help is in the room.</span></p></div>
     </div>
 
     <div class="sched-day">
       <h3><i class="ri-presentation-line"></i>Friday 13 November</h3>
-      <div class="slot key"><p class="slot-when">09:00–11:45</p><p class="slot-what"><b>Presentations to a panel</b><span>8 minutes plus 7 minutes of questions per group. You present to a panel <span class="tbc">guests TBC</span> playing a municipal client and a supplier, who asks: could someone deliver against this brief, and what is unclear?</span></p></div>
+      <div class="slot key"><p class="slot-when">09:00–11:45</p><p class="slot-what"><b>Presentations to a panel</b><span>8 minutes plus 7 minutes of questions per group. You present to a panel playing a municipal client and a supplier <span class="tbc">guests TBC</span>, who asks: could someone deliver against this specification, and what is unclear?</span></p></div>
       <div class="slot"><p class="slot-when">12:00–17:00</p><p class="slot-what"><b>Revise after the panel's questions</b><span>No teaching.</span></p></div>
-      <div class="slot key"><p class="slot-when">17:00</p><p class="slot-what"><b>Hand-in</b><span>Brief, prototype and build log.</span></p></div>
+      <div class="slot key"><p class="slot-when">17:00</p><p class="slot-what"><b>Hand-in</b><span>Specification, mockup and build log.</span></p></div>
     </div>
   </div>
 </section>
@@ -378,10 +401,12 @@ footer p{margin:0}
 <section class="sec" id="deliverable">
   <div class="sec-head"><div class="sec-num"><i class="ri-draft-line"></i>03</div><h2>Deliverable</h2></div>
   <div class="sec-body">
-    <p class="lede">A pre-requirement brief, written as a municipal planner. The prototype is its evidence annex.</p>
-    <div class="note lime"><i class="ri-focus-3-line"></i><p><b>Purpose first, and be specific.</b> Your twin, or the function you specify, must serve a purpose: support a decision, or answer an explicit exploratory question. "Show the city in 3D" is not a purpose. Name the place, the user, the decision or question, and the data. A brief that could have been written about any city, without this week, is not specific enough.</p></div>
-    <p>By group. The brief is the document that comes before a procurement specification. The template is in the starter kit and under <a href="#documents">Documents</a>.</p>
-    <h3><i class="ri-file-list-3-line"></i>The brief, 3–4 pages plus annexes</h3>
+    <p class="lede">A requirements specification (<i>kravspecifikation</i>), written as a municipal planner. This is the main deliverable. The mockup is a limited illustration of it.</p>
+    <p>It is a first draft of the requirements specification, written before procurement: what the municipality should ask a supplier for, and how it would check the delivery. It does not need to be a legally complete procurement document.</p>
+    <div class="note lime"><i class="ri-focus-3-line"></i><p><b>Purpose first, and be specific.</b> Your twin, or the function you specify, must serve a purpose: support a decision, or answer an explicit exploratory question. "Show the city in 3D" is not a purpose. Name the place, the user, the decision or question, and the data. A specification that could have been written about any city, without this week, is not specific enough.</p></div>
+    <p>By group. The template is in the starter kit and under <a href="#documents">Documents</a>.</p>
+    <h3><i class="ri-file-list-3-line"></i>The specification, 3–4 pages plus annexes</h3>
+    <p>Be demanding here, above all about data: what the function needs, who holds it, how current it must be, and what is missing. Specify what the municipality should ask for, not only what you managed to build.</p>
     <ol class="steps">
       <li><span><b>Purpose and need.</b> What the function is for: the decision it supports, or the question it explores if its purpose is exploratory. The planning problem, the place, and the named role whose work changes. Which other departments need the same function.</span></li>
       <li><span><b>Current state.</b> What the municipality has today, classified with the card: model, shadow or twin.</span></li>
@@ -392,16 +417,16 @@ footer p{margin:0}
       <li><span><b>Risks.</b> What breaks in real use, including what the mockup could not do.</span></li>
       <li><span><b>Questions for the supplier.</b> What you need answered before procuring.</span></li>
     </ol>
-    <p><b>Annex A</b> is the mockup: a zipped folder that opens by double-click, 3–4 screenshots, and what is real and what is synthetic. <b>Annex B</b> is the build log and the AI comparison.</p>
+    <p><b>Annex A</b> is the mockup: a zipped folder that opens by double-click, 3–4 screenshots, and what is real and what is fake. <b>Annex B</b> is the build log and the AI comparison.</p>
 
-    <h3><i class="ri-shapes-line"></i>The prototype</h3>
-    <p>One function, one screen, usually built on the starter kit. It must serve the purpose your brief states. Its job is to show you something about the data you could not have known from the outside, not to look finished.</p>
+    <h3><i class="ri-shapes-line"></i>The mockup</h3>
+    <p>A mockup, not a working product. It shows <b>one functionality, or one journey of your user</b> through the tool: what they see, what they click, what they get back. It can be entirely fake: hard-coded results, invented data, screens that only pretend to calculate. That is fine, as long as you say so.</p>
     <div class="cards">
-      <div class="card"><span class="tag">Accepted</span><h5><i class="ri-checkbox-circle-line"></i>Real data</h5><p>The function runs on actual open or municipal data.</p></div>
-      <div class="card"><span class="tag">Accepted</span><h5><i class="ri-flask-line"></i>Synthetic data</h5><p>Runs on mock data. Declare what is fake and what real data would be needed.</p></div>
+      <div class="card"><span class="tag">Accepted</span><h5><i class="ri-route-line"></i>One user journey</h5><p>A few screens or states that walk through one task, from question to answer. Results can be faked.</p></div>
+      <div class="card"><span class="tag">Accepted</span><h5><i class="ri-function-line"></i>One working function</h5><p>A single function that runs on real or synthetic data in the starter kit.</p></div>
       <div class="card"><span class="tag">Accepted if documented</span><h5><i class="ri-error-warning-line"></i>Does not work</h5><p>Show how far you got and document precisely where and why it stopped.</p></div>
     </div>
-    <div class="note"><i class="ri-links-line"></i><p>A Must requirement the mockup cannot show belongs in Risks. That column is what stops the code and the document drifting apart.</p></div>
+    <div class="note lime"><i class="ri-scales-3-line"></i><p><b>Never cut the specification to fit the mockup.</b> An ambitious specification with a limited mockup scores better than a modest specification that the mockup fully shows. In the requirements table, mark what the mockup shows (yes, faked, no). A Must requirement the mockup cannot show goes in Risks, not in the bin.</p></div>
   </div>
 </section>
 
@@ -424,7 +449,7 @@ footer p{margin:0}
     <details class="reading">
       <summary><i class="ri-user-location-line"></i>Microsimulation of one square<span class="count">4</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li><b>People on Stortorget.</b> Dots walk across Helsingborg's main square between entrances, avoiding buildings and each other. User: a planner redesigning the square for an event. <span class="why">The movement is invented. Your brief says what data would calibrate it (counts, mobile-network data) and who owns it.</span></li>
+        <li><b>People on Stortorget.</b> Dots walk across Helsingborg's main square between entrances, avoiding buildings and each other. User: a planner redesigning the square for an event. <span class="why">The movement is invented. Your specification says what data would calibrate it (counts, mobile-network data) and who owns it.</span></li>
         <li><b>Sun and shade.</b> Where the square is in shade at 15:00 in March, June and September, from the sun's position and building heights. User: a plan architect placing benches or a café terrace.<span class="why">Check the heights of the buildings around it. The kit guesses many of them.</span></li>
         <li><b>Street canyons and wind.</b> Height-to-width ratio of the streets around the square as a stand-in for wind and ventilation. User: an environmental planner screening a new building.<span class="why">An indicator, not a wind simulation. Saying so is part of the grade.</span></li>
         <li><b>Who can reach it.</b> A gravity model of trips to the square from the surrounding blocks, with population from SCB. User: a traffic planner choosing where to put cycle parking.<span class="why">Synthetic trips, declared as such.</span></li>
@@ -447,7 +472,7 @@ footer p{margin:0}
         <li><b>Who lives here.</b> A synthetic population per building, from floor area and an assumed area per person, checked against SCB's grid totals. User: a planner estimating school or care demand for a new district.<span class="why">State the assumptions, then show how much the result moves when you change them.</span></li>
         <li><b>How much energy.</b> Rough heating demand per building from size, age class and use. User: an energy or climate strategist choosing where to start renovation.<span class="why">Age and use are mostly unknown in the kit. Inventing them is fine if you say how.</span></li>
         <li><b>How loud.</b> Noise falling off with distance from busy roads, coloured on façades. User: a plan architect placing housing near a main road.<span class="why">A real noise study follows national methods. Yours is a screening sketch.</span></li>
-        <li><b>Replay a live day.</b> Record a day of real data once, such as bus positions from Trafiklab or hourly air quality in Helsingborg, save it as a file, and play it back on the map as if it were live. User: an operations or environment officer asking what a live feed would change in their work.<span class="why">This shows the data flow that makes a twin a twin, without depending on Wi-Fi or an API key during the presentation. Your brief says who would keep the feed running.</span></li>
+        <li><b>Replay a live day.</b> Record a day of real data once, such as bus positions from Trafiklab or hourly air quality in Helsingborg, save it as a file, and play it back on the map as if it were live. User: an operations or environment officer asking what a live feed would change in their work.<span class="why">This shows the data flow that makes a twin a twin, without depending on Wi-Fi or an API key during the presentation. Your specification says who would keep the feed running.</span></li>
         <li><b>Two futures side by side.</b> The same area in 2050 and 2100, or with and without a densification scenario. User: a political committee comparing options.<span class="why">Scenarios are where twins are most often oversold. Show the uncertainty, not one picture.</span></li>
       </ul>
     </details>
@@ -457,7 +482,7 @@ footer p{margin:0}
       <ul class="refs">
         <li><b>A different place.</b> Your hometown, a municipality you have worked in, or a small one that will never have a twin. What would a model there need to do first? Overture covers all of Sweden, so the AI can help you swap in another area.<span class="why">See the three conditions below.</span></li>
         <li><b>A twin for dialogue, not analysis.</b> A screen residents or developers use in a meeting: pin a comment, compare two massings, vote. User: the planner running the meeting.<span class="why">Here the purpose is the conversation, not the calculation. Say how you would know it worked.</span></li>
-        <li><b>Your own question.</b> If you think something important is missing from the data, from the examples or from this page, build a sketch of it with synthetic data and make the case in your brief.<span class="why">An exploratory purpose is a purpose, as long as the question is stated.</span></li>
+        <li><b>Your own question.</b> If you think something important is missing from the data, from the examples or from this page, build a sketch of it with synthetic data and make the case in your specification.<span class="why">An exploratory purpose is a purpose, as long as the question is stated.</span></li>
       </ul>
     </details>
     <p>Whatever you choose, invented or simulated data looks more certain than it is. The honesty box matters most here.</p>
@@ -480,16 +505,16 @@ footer p{margin:0}
 <section class="sec" id="assessment">
   <div class="sec-head"><div class="sec-num"><i class="ri-scales-3-line"></i>05</div><h2>Assessment</h2></div>
   <div class="sec-body">
-    <p>Code quality and visual polish are not assessed. <span class="tbc">weights and grading scale TBC</span></p>
+    <p>The specification carries most of the weight. Code quality, visual polish and how much of the mockup really works are not assessed. <span class="tbc">weights and grading scale TBC</span></p>
     <div class="tbl"><table>
       <thead><tr><th>Criterion</th><th>What we look for</th></tr></thead>
       <tbody>
         <tr><td><b>Purpose</b></td><td>The function serves a stated purpose: a decision it supports, or an exploratory question it answers. Every requirement traces back to it.</td></tr>
-        <tr><td><b>Specificity</b></td><td>A particular place, user, decision and dataset, not a generic city. Points only someone present this week could make: what the municipality said, where the hub report disagrees with it, what your prototype failed to do.</td></tr>
+        <tr><td><b>Specificity</b></td><td>A particular place, user, decision and dataset, not a generic city. Points only someone present this week could make: what the municipality said, where the hub report disagrees with it, what your mockup failed to do.</td></tr>
         <tr><td><b>User and need</b></td><td>A named role, a real decision or question, a reason for this function over others.</td></tr>
-        <tr><td><b>Data realism</b></td><td>Currency, owner, update cycle, and what happens when nobody maintains it.</td></tr>
+        <tr><td><b>Data realism</b></td><td>The most demanding part. Every dataset the function needs, its owner, currency, update cycle and licence, what is missing, and what happens when nobody maintains it.</td></tr>
         <tr><td><b>Scope discipline</b></td><td>Something excluded, with a reason.</td></tr>
-        <tr><td><b>Honesty about limits</b></td><td>Fake and failed parts declared precisely, and fed into Risks.</td></tr>
+        <tr><td><b>Honesty about limits</b></td><td>Fake and failed parts of the mockup declared precisely, and fed into Risks. A faked mockup is fine; an undeclared one is not.</td></tr>
         <tr><td><b>Build log and AI comparison</b></td><td>What the model got wrong, what you changed, and where a general AI was generic or wrong about Swedish conditions.</td></tr>
         <tr><td><b>Presentation</b></td><td>You defend the choice of function and answer the supplier's question.</td></tr>
       </tbody>
@@ -500,12 +525,12 @@ footer p{margin:0}
 <section class="sec" id="ai">
   <div class="sec-head"><div class="sec-num"><i class="ri-sparkling-2-line"></i>06</div><h2>Using AI</h2></div>
   <div class="sec-body">
-    <p>AI-assisted coding is how you build the prototype, and it is allowed and expected. What is assessed is your judgment around it. <span class="tbc">AI tool TBC</span></p>
+    <p>AI-assisted coding is how you build the mockup, and it is allowed and expected. What is assessed is your judgment around it. <span class="tbc">AI tool TBC</span></p>
     <div class="cards">
       <div class="card"><h5><i class="ri-shield-check-line"></i>Keep data out</h5><p>Never paste the data files into a chat. Paste the code plus three sample buildings.</p></div>
       <div class="card"><h5><i class="ri-save-3-line"></i>Save numbered copies</h5><p>Save <code>v1.html</code>, <code>v2.html</code> every time it works. This is your undo button.</p></div>
       <div class="card"><h5><i class="ri-loop-right-line"></i>Rotate the keyboard</h5><p>Take turns typing the prompts. The build log names who wrote each one.</p></div>
-      <div class="card"><h5><i class="ri-anchor-line"></i>Anchor the brief</h5><p>Use what only you have: Tuesday's session, the checkpoint, and what your prototype could not do.</p></div>
+      <div class="card"><h5><i class="ri-anchor-line"></i>Anchor the specification</h5><p>Use what only you have: Tuesday's session, the checkpoint, and what your mockup could not do.</p></div>
     </div>
     <div class="note lime"><i class="ri-file-list-2-line"></i>
       <div>
@@ -666,8 +691,8 @@ footer p{margin:0}
   <div class="sec-head"><div class="sec-num"><i class="ri-database-2-line"></i>08</div><h2>Data and tools</h2></div>
   <div class="sec-body">
     <p class="lede">A municipal twin is rarely one platform. It is a federation of datasets owned by different organisations at different levels.</p>
-    <p>A curated starting point, not a complete list. Each entry says what it offers and what it takes to get it. <span class="kit">KIT</span> marks data that can go straight into the starter kit as a downloaded file. Live feeds and APIs usually cannot, because the kit runs without a server: describe them in your brief instead.</p>
-    <div class="note"><i class="ri-plug-line"></i><p><b>Want to use a live API in your prototype?</b> Ask Javier first. Some need a key, some refuse requests from a page opened as a file, and we can check together whether yours works before you build on it.</p></div>
+    <p>A curated starting point, not a complete list. Each entry says what it offers and what it takes to get it. <span class="kit">KIT</span> marks data that can go straight into the starter kit as a downloaded file. Live feeds and APIs usually cannot, because the kit runs without a server: describe them in your specification instead.</p>
+    <div class="note"><i class="ri-plug-line"></i><p><b>Want to use a live API in your mockup?</b> Ask Javier first. Some need a key, some refuse requests from a page opened as a file, and we can check together whether yours works before you build on it.</p></div>
 
     <h4>Ask of every dataset</h4>
     <ol class="questions">
@@ -684,9 +709,9 @@ footer p{margin:0}
         <li><b>Lantmäteriet</b>: <a href="https://www.lantmateriet.se/sv/geodata/vara-produkter/avgiftsfria-produkter/oppna-data/">open geodata</a>. Building footprints, addresses, the national elevation model (1–2 m), orthophotos, hydrography, boundaries.<span class="kit">KIT</span><span class="why">Downloads go through Geotorget and need an account, which can take days to approve. Apply early if you want it.</span></li>
         <li><b>SMHI</b>: <a href="https://www.smhi.se/klimat/framtidens-klimat/stigande-havsnivaer/framtida-medelvattenstand/projektioner">future mean sea level</a> per coastal municipality, by scenario and decade (2030–2150), in RH 2000. Also <a href="https://opendata.smhi.se/">open data</a> and an <a href="https://opendata.smhi.se/metobs/api">observations API</a>.<span class="kit">KIT</span><span class="why">The projections are what option A needs. Mean level only: storm surges come on top.</span></li>
         <li><b>SCB</b>: <a href="https://www.scb.se/vara-tjanster/oppna-data/oppna-geodata/">open geodata</a>. Population by grid, DeSO and RegSO areas, built-up areas.<span class="kit">KIT</span><span class="why">The base for any synthetic population or gravity model.</span></li>
-        <li><b>Trafikverket</b>: <a href="https://www.trafikverket.se/e-tjanster/trafikverkets-oppna-api-for-trafikinformation/">open traffic API</a>. Road works, disruptions, road conditions, rail, ferries, road weather. Real time.<span class="why">Free API key. Describe in the brief rather than build.</span></li>
+        <li><b>Trafikverket</b>: <a href="https://www.trafikverket.se/e-tjanster/trafikverkets-oppna-api-for-trafikinformation/">open traffic API</a>. Road works, disruptions, road conditions, rail, ferries, road weather. Real time.<span class="why">Free API key. Describe in the specification rather than build.</span></li>
         <li><b>Geodataportalen</b>: <a href="https://www.lantmateriet.se/sv/geodata/Geodataportalen/">national geodata catalogue</a>, run by Lantmäteriet.<span class="why">A search tool, not a download. Terms depend on each provider.</span></li>
-        <li><b>Boverket</b>: <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/detaljplan/digitalisering/">digital detailed plans</a>.<span class="why">For a brief that links a function to plan decisions. How many of a municipality's plans are digital varies.</span></li>
+        <li><b>Boverket</b>: <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/detaljplan/digitalisering/">digital detailed plans</a>.<span class="why">For a specification that links a function to plan decisions. How many of a municipality's plans are digital varies.</span></li>
         <li><b>Sveriges dataportal</b>: <a href="https://www.dataportal.se/">dataportal.se</a>, the national catalogue of open data from public bodies.<span class="why">Good for checking whether a municipality publishes what you need.</span></li>
       </ul>
     </details>
@@ -720,7 +745,7 @@ footer p{margin:0}
         <li><b>Weather and sea level, SMHI</b>: the <a href="https://opendata.smhi.se/metobs/api">observations API</a>, near real time.</li>
         <li><b>Public transport, Trafiklab</b>: <a href="https://www.trafiklab.se/api">GTFS-Realtime</a> vehicle positions and delays.</li>
         <li><b>Telraam</b>: <a href="https://telraam.net">citizen-run traffic counters</a> counting pedestrians, cyclists, cars and heavy vehicles, with an open API.<span class="why">Coverage depends on where volunteers have placed a counter.</span></li>
-        <li><b>Telia Crowd Insights</b>: <a href="https://business.teliacompany.com/crowd-insights/how-it-works">people-movement statistics</a> from the mobile network.<span class="why">This is how a municipality would know how many people visit a square. It is commercial and built on personal data, so it cannot go in your mockup, but your brief can specify it: who buys it, at what resolution, and under which GDPR basis.</span></li>
+        <li><b>Telia Crowd Insights</b>: <a href="https://business.teliacompany.com/crowd-insights/how-it-works">people-movement statistics</a> from the mobile network.<span class="why">This is how a municipality would know how many people visit a square. It is commercial and built on personal data, so it cannot go in your mockup, but your specification can require it: who buys it, at what resolution, and under which GDPR basis.</span></li>
       </ul>
     </details>
 
@@ -730,14 +755,14 @@ footer p{margin:0}
         <li><b>Prompting for synthetic data.</b> Ask the AI to generate data inside the page, not a separate file, and to label it. For example: <i>"Create 2,000 synthetic trips between the kit's buildings using a gravity model: trips between two places grow with their sizes (use footprint area × height) and fall with distance squared. Show them as lines whose thickness is the number of trips. Label everything 'synthetic'."</i><span class="why">Synthetic is fine if you declare it. The finding is which real data would replace it, and who holds that data.</span></li>
         <li><b>SunCalc</b>: <a href="https://github.com/mourner/suncalc">sun position in JavaScript</a> (BSD-2-Clause).<span class="why">Small enough to save into the kit. Enough for "where is the sun at 15:00 on 21 March", and rough shadow lengths from building heights.</span></li>
         <li><b>UMEP for QGIS</b>: <a href="https://umep-docs.readthedocs.io/">urban climate tools</a>: solar radiation, shadows, thermal comfort, sky view.<span class="why">Open source. What a municipality's analyst would use for the real version of a solar or heat study.</span></li>
-        <li><b>Eclipse SUMO</b>: <a href="https://eclipse.dev/sumo/">traffic microsimulation</a>, open source.<span class="why">Real traffic and pedestrian simulation, but an installed program. Name it in the brief as the tool behind a full version.</span></li>
+        <li><b>Eclipse SUMO</b>: <a href="https://eclipse.dev/sumo/">traffic microsimulation</a>, open source.<span class="why">Real traffic and pedestrian simulation, but an installed program. Name it in the specification as the tool behind a full version.</span></li>
         <li><b>Wind and street canyons.</b> Proper wind simulation needs CFD software and days of set-up. In the kit you can compute an indicator instead, such as the ratio of building height to street width.<span class="why">Say clearly in the honesty box that it is an indicator, not a simulation.</span></li>
       </ul>
     </details>
 
     <h3><i class="ri-stack-line"></i>Suggested data per starting example</h3>
     <div class="tbl"><table>
-      <thead><tr><th>Example</th><th>In the kit</th><th>Better source to name in your brief</th></tr></thead>
+      <thead><tr><th>Example</th><th>In the kit</th><th>Better source to name in your specification</th></tr></thead>
       <tbody>
         <tr><td><b>A</b> Sea level</td><td>Overture buildings, Copernicus ground height</td><td>Lantmäteriet elevation model, SMHI sea-level projections</td></tr>
         <tr><td><b>B</b> Out-of-date model</td><td>Overture buildings, invented "last checked" years</td><td>Helsingborg's 3D model (2014) against LiDAR 2019 or orthophotos, and who records each update</td></tr>
@@ -763,7 +788,7 @@ footer p{margin:0}
     <div class="cards">
       <div class="card"><h5><i class="ri-download-2-line"></i>Before Monday</h5><p>Download and unzip the starter kit from Documents, start the first required reading, and make sure you can join the online sessions.</p></div>
       <div class="card"><h5><i class="ri-team-line"></i>Groups</h5><p>Formed from the skills questionnaire and announced on Monday. <span class="tbc">size TBC</span></p></div>
-      <div class="card"><h5><i class="ri-inbox-archive-line"></i>Hand-in</h5><p>Brief as PDF, prototype as a zipped folder, screenshots and build log. <span class="tbc">where TBC</span></p></div>
+      <div class="card"><h5><i class="ri-inbox-archive-line"></i>Hand-in</h5><p>Specification as PDF, mockup as a zipped folder, screenshots and build log. <span class="tbc">where TBC</span></p></div>
       <div class="card"><h5><i class="ri-chat-3-line"></i>Contact</h5><p>Javier Argota Sánchez-Vaquerizo<br><a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a></p></div>
     </div>
   </div>
@@ -787,6 +812,41 @@ footer p{margin:0}
     var next=cur==="dark"?"light":"dark"; root.setAttribute("data-theme",next);
     try{localStorage.setItem("theme",next);}catch(e){}
   });
+})();
+(function(){
+  var OPEN = {about:1, schedule:1};
+  var secs = document.querySelectorAll("main section.sec");
+  secs.forEach(function(sec){
+    var head = sec.querySelector(".sec-head"), body = sec.querySelector(".sec-body");
+    if(!head || !body) return;
+    if(!body.id) body.id = sec.id + "-body";
+    var btn = document.createElement("button");
+    btn.type = "button"; btn.className = "sec-toggle";
+    btn.setAttribute("aria-controls", body.id);
+    while(head.firstChild) btn.appendChild(head.firstChild);
+    var chev = document.createElement("span"); chev.className = "sec-chev"; chev.setAttribute("aria-hidden","true");
+    chev.innerHTML = '<i class="ri-arrow-down-s-line"></i>';
+    btn.appendChild(document.createElement("br")); btn.appendChild(chev);
+    head.appendChild(btn);
+    function set(open){ sec.classList.toggle("collapsed", !open); btn.setAttribute("aria-expanded", open); }
+    set(!!OPEN[sec.id]);
+    btn.addEventListener("click", function(){ set(sec.classList.contains("collapsed")); });
+    sec._open = function(){ set(true); };
+  });
+  function openFromHash(){
+    var id = location.hash.slice(1); if(!id) return;
+    var el = document.getElementById(id); if(!el) return;
+    var sec = el.closest("section.sec"); if(sec && sec._open){ sec._open(); }
+    if(el.tagName === "DETAILS") el.open = true;
+    requestAnimationFrame(function(){ el.scrollIntoView(); });
+  }
+  window.addEventListener("hashchange", openFromHash);
+  document.addEventListener("click", function(e){
+    var a = e.target.closest('a[href^="#"]'); if(!a) return;
+    var id = a.getAttribute("href").slice(1), el = id && document.getElementById(id);
+    if(el){ var sec = el.closest("section.sec"); if(sec && sec._open) sec._open(); }
+  });
+  openFromHash();
 })();
 (function(){
   document.querySelectorAll("[data-flip]").forEach(function(card){
