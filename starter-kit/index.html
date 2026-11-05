@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helsingborg starter kit</title>
+
+<!-- Map library, stored in the lib folder so the kit works without internet -->
+<link rel="stylesheet" href="lib/maplibre-gl.css">
+<script src="lib/maplibre-gl.js"></script>
+
+<!-- Data, stored as JavaScript files so the page opens with a double-click.
+     Each file defines one variable: BUILDINGS, WATER, PARKS. See docs/DATA.md -->
+<script src="data/buildings.js"></script>
+<script src="data/context.js"></script>
+
+<style>
+  /* ---------- COLOURS AND FONTS: change these to restyle the whole page ---------- */
+  :root {
+    --panel-bg: #ffffff;
+    --text: #1d2327;
+    --muted: #5f6b73;
+    --line: #e2e5e1;
+    --accent: #0f5257;
+    --warning-bg: #fdf3e7;
+    --warning-line: #c46a1c;
+    --land: #eef0eb;
+    --water: #a9cbe0;
+    --park: #cfe3c3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: var(--land); }
+
+  /* ---------- LAYOUT: map on the left, panel on the right ---------- */
+  #app { display: flex; height: 100%; }
+  #map { flex: 1; min-width: 0; }
+  #panel { width: 360px; background: var(--panel-bg); border-left: 1px solid var(--line); padding: 20px; overflow-y: auto; }
+  @media (max-width: 760px) {
+    #app { flex-direction: column; }
+    #map { flex: none; height: 55vh; }
+    #panel { width: auto; border-left: none; border-top: 1px solid var(--line); }
+  }
+
+  /* ---------- PANEL CONTENT ---------- */
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 13px; margin: 0 0 16px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 20px 0 8px; }
+  .function { font-size: 15px; line-height: 1.45; margin: 0; }
+  .user { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+  label { display: block; font-size: 14px; margin-bottom: 6px; }
+  input[type=range] { width: 100%; }
+  .stat { font-size: 28px; font-weight: 600; color: var(--accent); }
+  .stat-label { font-size: 13px; color: var(--muted); }
+  .legend { display: flex; height: 10px; border-radius: 2px; overflow: hidden; margin-top: 6px; }
+  .legend span { flex: 1; }
+  .legend-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+  #info { font-size: 13px; line-height: 1.5; }
+  #info table { border-collapse: collapse; width: 100%; }
+  #info td { padding: 3px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  #info td:first-child { color: var(--muted); width: 45%; }
+  .limits { background: var(--warning-bg); border-left: 3px solid var(--warning-line); padding: 10px 12px; font-size: 13px; line-height: 1.45; }
+  .limits ul { margin: 6px 0 0; padding-left: 18px; }
+  .sources { font-size: 11px; color: var(--muted); margin-top: 20px; line-height: 1.4; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="map"></div>
+
+  <div id="panel">
+    <!-- ---------- 1. WHAT THIS TOOL IS: groups replace this text with their own function ---------- -->
+    <h1>Helsingborg starter kit</h1>
+    <p class="subtitle">Worked example. Replace it with your group's function.</p>
+
+    <h2>Function</h2>
+    <p class="function">The tool shall show which buildings are taller than a height the user chooses.</p>
+    <p class="user">User: plan architect checking a height proposal against its surroundings.</p>
+
+    <!-- ---------- 2. CONTROLS: what the user can change ---------- -->
+    <h2>Control</h2>
+    <label for="height-slider">Highlight buildings taller than <b><span id="height-value">20</span> m</b></label>
+    <input id="height-slider" type="range" min="0" max="60" step="1" value="20">
+
+    <!-- ---------- 3. RESULT: what the tool reports back ---------- -->
+    <h2>Result</h2>
+    <div class="stat" id="count">0</div>
+    <div class="stat-label">buildings above the chosen height, of <span id="total">0</span> in the study area</div>
+
+    <h2>Building height</h2>
+    <div class="legend">
+      <span style="background:#d9d4c7"></span><span style="background:#f2c879"></span><span style="background:#e8894a"></span><span style="background:#c4452e"></span><span style="background:#7a1f2b"></span>
+    </div>
+    <div class="legend-labels"><span>0 m</span><span>15</span><span>30</span><span>45</span><span>60+ m</span></div>
+
+    <!-- ---------- 4. DETAILS: filled in when the user clicks a building ---------- -->
+    <h2>Selected building</h2>
+    <div id="info">Click a building on the map.</div>
+
+    <!-- ---------- 5. HONESTY BOX: groups must keep this and rewrite it ---------- -->
+    <h2>What this does not show</h2>
+    <div class="limits">
+      <ul>
+        <li>Heights are measured for only part of the buildings. The rest are estimated from floor counts or set to a default of 6 m (click a building to see which).</li>
+        <li>Ground elevation is approximate (30 m grid, includes some buildings and trees).</li>
+        <li>The "model last checked" year is invented for teaching. No public source records it.</li>
+      </ul>
+    </div>
+
+    <p class="sources">Data: Overture Maps Foundation (buildings, water, land use; includes OpenStreetMap contributors, ODbL) and Copernicus DEM GLO-30 (© DLR, Airbus, provided under COPERNICUS by the EU and ESA). See docs/DATA.md.</p>
+  </div>
+</div>
+
+<script>
+// =====================================================================
+// SETTINGS: the numbers a group is most likely to change
+// =====================================================================
+const START_VIEW = { center: [12.6965, 56.0435], zoom: 15, pitch: 55, bearing: -20 };
+const DEFAULT_THRESHOLD = 20; // metres, must match the slider's value above
+const STUDY_AREA = [[12.66, 56.015], [12.745, 56.068]]; // the map cannot be dragged far outside the data
+
+// =====================================================================
+// THE MAP: background, water, parks and 3D buildings, all from local files
+// =====================================================================
+const map = new maplibregl.Map({
+  container: "map",
+  ...START_VIEW,
+  maxBounds: STUDY_AREA,
+  style: {
+    version: 8,
+    sources: {
+      water: { type: "geojson", data: WATER },
+      parks: { type: "geojson", data: PARKS },
+      buildings: { type: "geojson", data: BUILDINGS, promoteId: "id" }
+    },
+    layers: [
+      { id: "land", type: "background", paint: { "background-color": "#eef0eb" } },
+      { id: "parks", type: "fill", source: "parks", paint: { "fill-color": "#cfe3c3" } },
+      { id: "water", type: "fill", source: "water", paint: { "fill-color": "#a9cbe0" } },
+      {
+        // Every building, extruded to its height and coloured by height
+        id: "buildings-3d",
+        type: "fill-extrusion",
+        source: "buildings",
+        paint: {
+          "fill-extrusion-height": ["get", "height_m"],
+          "fill-extrusion-color": [
+            "interpolate", ["linear"], ["get", "height_m"],
+            0, "#d9d4c7", 15, "#f2c879", 30, "#e8894a", 45, "#c4452e", 60, "#7a1f2b"
+          ],
+          "fill-extrusion-opacity": 0.9
+        }
+      }
+    ]
+  }
+});
+map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-left");
+
+// =====================================================================
+// THE FUNCTION: this is the part a group rewrites
+// Buildings below the threshold are drawn grey and see-through,
+// so the ones that pass the test stand out.
+// =====================================================================
+function applyThreshold(threshold) {
+  const isAbove = [">", ["get", "height_m"], threshold];
+
+  map.setPaintProperty("buildings-3d", "fill-extrusion-color", [
+    "case", isAbove,
+    ["interpolate", ["linear"], ["get", "height_m"], 0, "#d9d4c7", 15, "#f2c879", 30, "#e8894a", 45, "#c4452e", 60, "#7a1f2b"],
+    "#c9ccc6"
+  ]);
+
+  const count = BUILDINGS.features.filter(f => f.properties.height_m > threshold).length;
+  document.getElementById("count").textContent = count.toLocaleString("sv-SE");
+  document.getElementById("height-value").textContent = threshold;
+}
+
+// =====================================================================
+// CLICKING A BUILDING: show its attributes in the panel
+// =====================================================================
+const LABELS = {
+  height_m: "Height (m)",
+  height_source: "Height comes from",
+  floors: "Floors",
+  use: "Use",
+  ground_m: "Ground elevation (m, approx.)",
+  model_checked: "Model last checked (invented)",
+  source: "Footprint source"
+};
+
+function showInfo(props) {
+  const rows = Object.keys(LABELS)
+    .map(key => `<tr><td>${LABELS[key]}</td><td>${props[key] ?? "unknown"}</td></tr>`)
+    .join("");
+  document.getElementById("info").innerHTML = `<table>${rows}</table>`;
+}
+
+map.on("click", "buildings-3d", e => showInfo(e.features[0].properties));
+map.on("mouseenter", "buildings-3d", () => map.getCanvas().style.cursor = "pointer");
+map.on("mouseleave", "buildings-3d", () => map.getCanvas().style.cursor = "");
+
+// =====================================================================
+// START: wire the slider and draw the first result
+// =====================================================================
+document.getElementById("total").textContent = BUILDINGS.features.length.toLocaleString("sv-SE");
+const slider = document.getElementById("height-slider");
+slider.addEventListener("input", () => applyThreshold(Number(slider.value)));
+map.on("load", () => applyThreshold(DEFAULT_THRESHOLD));
+</script>
+</body>
+</html>

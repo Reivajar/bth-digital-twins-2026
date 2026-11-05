@@ -1,0 +1,11 @@
+# Keep teacher-only and personal material out of this public repo
+.DS_Store
+Thumbs.db
+*.skp
+*.obj
+*.mtl
+teacher/
+docs/
+PROJECT-CONTEXT.md
+*questionnaire*
+__pycache__/
