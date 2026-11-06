@@ -139,6 +139,7 @@ h4{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercas
 .slot-what b{font-weight:700}
 .slot-what span{display:block;color:var(--muted);font-size:.95rem;margin-top:.15rem}
 .slot.key .slot-when{color:var(--violet)}
+.slot-what span.tbc{display:inline;margin-top:0;font-size:.68rem}
 @media (max-width:560px){.slot{grid-template-columns:1fr;gap:.2rem}}
 
 /* ---------- cards ---------- */
@@ -262,7 +263,7 @@ footer p{margin:0}
   <p class="standfirst">What digital twins are, what Swedish municipalities actually have, and how to specify something worth building.</p>
   <dl class="facts">
     <div><dt><i class="ri-calendar-line"></i>Dates</dt><dd>9–13 November 2026</dd></div>
-    <div><dt><i class="ri-map-pin-2-line"></i>Where</dt><dd>Monday online, Tuesday hybrid, Wed–Fri campus</dd></div>
+    <div><dt><i class="ri-map-pin-2-line"></i>Where</dt><dd>Monday and Tuesday on Zoom, Wed–Fri campus (C533)</dd></div>
     <div><dt><i class="ri-file-text-line"></i>Deliverable</dt><dd>Requirements specification + a limited mockup</dd></div>
     <div><dt><i class="ri-timer-flash-line"></i>Due</dt><dd>Friday 13 Nov, 17:00</dd></div>
   </dl>
@@ -273,17 +274,18 @@ footer p{margin:0}
     <div class="day-name">Monday <span class="day-mode">Online</span></div>
     <div class="day-num">09</div>
     <ul>
-      <li><b>Morning</b>Opening lecture: what makes a twin a twin</li>
-      <li><b>15:30</b>The national hub report</li>
-      <li><b>17:15</b>Starter-kit check</li>
+      <li><b>09:15</b>Introduction to digital twins</li>
+      <li><b>11:30</b>Starter-kit check</li>
+      <li><b>15:30</b>Municipal twins in theory and practice</li>
     </ul>
   </div>
   <div class="day">
-    <div class="day-name">Tuesday <span class="day-mode">Hybrid</span></div>
+    <div class="day-name">Tuesday <span class="day-mode">Online</span></div>
     <div class="day-num">10</div>
     <ul>
-      <li><b>Morning</b>Readings, on your own</li>
-      <li><b>13:30</b>Helsingborg: municipal practice</li>
+      <li><b>09:15</b>Readings and writing, on your own</li>
+      <li><b>11:15</b>Q&amp;A: written report</li>
+      <li><b>13:40</b>Helsingborg: municipal practice</li>
       <li><b>15:15</b>Guided vibecoding</li>
     </ul>
   </div>
@@ -291,23 +293,23 @@ footer p{margin:0}
     <div class="day-name">Wednesday <span class="day-mode">Campus</span></div>
     <div class="day-num">11</div>
     <ul>
-      <li><b>Morning</b>Research, vision, practice. Define your function</li>
-      <li><b>Afternoon</b>Build</li>
+      <li><b>10:00</b>Literature seminar</li>
+      <li><b>13:00</b>Assignment day 1: define your function, build</li>
     </ul>
   </div>
   <div class="day">
     <div class="day-name">Thursday <span class="day-mode">Campus</span></div>
     <div class="day-num">12</div>
     <ul>
+      <li><b>09:15</b>Assignment day 2</li>
       <li><b>11:30</b>Checkpoint, scope freezes</li>
-      <li><b>Afternoon</b>AI comparison, draft the specification</li>
     </ul>
   </div>
   <div class="day">
     <div class="day-name">Friday <span class="day-mode">Campus</span></div>
     <div class="day-num">13</div>
     <ul>
-      <li><b>09:00</b>Presentations to a panel</li>
+      <li><b>09:15</b>Presentations</li>
       <li><b>17:00</b>Hand-in</li>
     </ul>
   </div>
@@ -350,53 +352,48 @@ footer p{margin:0}
 <section class="sec" id="schedule">
   <div class="sec-head"><div class="sec-num"><i class="ri-calendar-schedule-line"></i>02</div><h2>Schedule</h2></div>
   <div class="sec-body">
-    <p>The times below are the real start times, with the academic quarter already included, so 10:15 means we begin at 10:15.</p>
+    <p>Week 46 · Analysing: digital twins</p>
 
     <div class="sched-day">
-      <h3><i class="ri-download-2-line"></i>Before Monday</h3>
-      <div class="slot"><p class="slot-when">By Sunday</p><p class="slot-what"><b>Download and open the starter kit</b><span>Download it from <a href="#documents">Documents</a>, unzip it and double-click <code>index.html</code>. If you see the 3D map of Helsingborg, you are ready. If not, no problem: we sort it out together on Monday.</span></p></div>
-      <div class="slot"><p class="slot-when">By Sunday</p><p class="slot-what"><b>Start reading</b><span>Begin with the first of the <a href="#readings">required readings</a>, on what makes a twin a twin. It is short.</span></p></div>
-      <div class="slot"><p class="slot-when">By Sunday</p><p class="slot-what"><b>Set up the AI tool</b><span>Create an account for the AI tool <span class="tbc">tool TBC</span>, so Monday's check only needs a login.</span></p></div>
+      <h3><i class="ri-computer-line"></i>Monday 9 November · Zoom</h3>
+      <div class="slot key"><p class="slot-when">09:15–11:00</p><p class="slot-what"><b>Lecture: Introduction to digital twins</b><span>Javier Argota. Where the idea comes from, why cities are the hard case, and a one-page classification card (model, shadow, twin) that you use all week.</span></p></div>
+      <div class="slot"><p class="slot-when">11:00–11:30</p><p class="slot-what"><b>Q&amp;A on the lecture</b><span>Your questions on the opening lecture. Also a short introduction to what you hand in on Friday, and the groups.</span></p></div>
+      <div class="slot"><p class="slot-when">11:30–12:00</p><p class="slot-what"><b>Starter-kit check</b><span>Download the starter kit from <a href="#documents">Documents</a>, unzip it, double-click <code>index.html</code> and log into the AI tool <span class="tbc">tool TBC</span>, with help on hand. If you see the 3D map of Helsingborg, you are done.</span></p></div>
+      <div class="slot key"><p class="slot-when">15:30–17:00</p><p class="slot-what"><b>Lecture: Municipal digital twins in theory and practice</b><span>Adam Sjödin, co-author of <i>Digital Vision Sverige</i> (2025). Note where his definition of a twin differs from the card.</span></p></div>
     </div>
 
     <div class="sched-day">
-      <h3><i class="ri-computer-line"></i>Monday 9 November · online</h3>
-      <div class="slot"><p class="slot-when">09:15–10:00</p><p class="slot-what"><b>Welcome: the week and the deliverable</b><span>What you hand in on Friday, so you read everything this week as material for it. Groups are announced.</span></p></div>
-      <div class="slot"><p class="slot-when">10:15–12:00</p><p class="slot-what"><b>Opening lecture: foundations</b><span>Where the idea comes from, why cities are the hard case, and a one-page classification card (model, shadow, twin) that you use all week.</span></p></div>
-      <div class="slot key"><p class="slot-when">15:30–17:00</p><p class="slot-what"><b>The national vision: Sweden's digital twin hub report</b><span>Adam, co-author of <i>Digital Vision Sverige</i> (2025), on Zoom. Note where his definition of a twin differs from the card.</span></p></div>
-      <div class="slot"><p class="slot-when">17:15–17:45</p><p class="slot-what"><b>Starter-kit check</b><span>Everyone opens the starter kit on their own laptop and logs into the AI tool, with help on hand. If it already works for you, it takes two minutes.</span></p></div>
-    </div>
-
-    <div class="sched-day">
-      <h3><i class="ri-building-2-line"></i>Tuesday 10 November · hybrid <span class="tbc">likely, TBC</span></h3>
-      <div class="slot"><p class="slot-when">Morning</p><p class="slot-what"><b>Readings, on your own</b><span>Start with the first required reading. Report any starter-kit problem in the course channel.</span></p></div>
-      <div class="slot key"><p class="slot-when">13:30–15:00</p><p class="slot-what"><b>Municipal practice: Helsingborg</b><span>Trine Nykjär (Stadsbyggnadsförvaltningen) and Magnus (3D coordination). What Helsingborg actually has, why it is not yet a twin, "digital cousins", Gaussian splatting, and the Smart stad pre-study. Come with questions.</span></p></div>
+      <h3><i class="ri-building-2-line"></i>Tuesday 10 November · Zoom</h3>
+      <div class="slot"><p class="slot-when">09:15–11:15</p><p class="slot-what"><b>Independent readings and writing</b><span>Work through the <a href="#readings">required readings</a>. Report any starter-kit problem in the course channel.</span></p></div>
+      <div class="slot"><p class="slot-when">11:15–12:00</p><p class="slot-what"><b>Q&amp;A: the written report</b><span>With Andrea Gimeno Sanchez.</span></p></div>
+      <div class="slot key"><p class="slot-when">13:40–14:50</p><p class="slot-what"><b>Lecture: Helsingborg municipality</b><span>Trine Nykjär and Magnus Ihrefors. What Helsingborg actually has, why it is not yet a twin, "digital cousins", Gaussian splatting, and the Smart stad pre-study. Come with questions. Before or after, look at two of their Gaussian splats: <a href="https://kartor.helsingborg.se/gaussionsplat/HFYzqlZQWzH36meQUSxi9Q/">Östra Ramlösa</a> and <a href="https://kartor.helsingborg.se/gaussionsplat/hmNKJWQTzb6tK7H0a71GnA/">Söderviadukten</a>.</span></p></div>
       <div class="slot"><p class="slot-when">15:15–16:45</p><p class="slot-what"><b>Guided vibecoding</b><span>In your group: make one change to the worked example, break it, go back to the last saved copy, and write your first build-log entry.</span></p></div>
     </div>
 
     <div class="sched-day">
-      <h3><i class="ri-lightbulb-flash-line"></i>Wednesday 11 November</h3>
-      <div class="slot"><p class="slot-when">09:15–10:45</p><p class="slot-what"><b>Research, vision and practice</b><span>The hub report's claims tested against Helsingborg and the readings.</span></p></div>
-      <div class="slot key"><p class="slot-when">11:00–12:00</p><p class="slot-what"><b>Define your function</b><span>Your own function, accepted with a stated purpose (a decision or an exploratory question), a named user role and a data source.</span></p></div>
-      <div class="slot"><p class="slot-when">13:00–16:30</p><p class="slot-what"><b>Build version 0</b><span>The simplest visible version, on real or synthetic data. Something on screen by 16:30.</span></p></div>
+      <h3><i class="ri-lightbulb-flash-line"></i>Wednesday 11 November · C533</h3>
+      <div class="slot key"><p class="slot-when">10:00–12:00</p><p class="slot-what"><b>Literature seminar</b><span>With Andrea Gimeno Sanchez. The <a href="#readings">required readings</a>, tested against the hub report and Helsingborg.</span></p></div>
+      <div class="slot key"><p class="slot-when">13:00–14:00</p><p class="slot-what"><b>Assignment day 1: define your function</b><span>Your own function, accepted with a stated purpose (a decision or an exploratory question), a named user role and a data source.</span></p></div>
+      <div class="slot"><p class="slot-when">14:00–16:00</p><p class="slot-what"><b>Build version 0</b><span>The simplest visible version, on real or synthetic data. Something on screen by 16:00.</span></p></div>
     </div>
 
     <div class="sched-day">
-      <h3><i class="ri-hammer-line"></i>Thursday 12 November</h3>
-      <div class="slot"><p class="slot-when">09:15–11:30</p><p class="slot-what"><b>Build</b><span>Improve version 0 and keep the build log.</span></p></div>
+      <h3><i class="ri-hammer-line"></i>Thursday 12 November · C533</h3>
+      <div class="slot"><p class="slot-when">09:15–11:30</p><p class="slot-what"><b>Assignment day 2: build</b><span>Improve version 0 and keep the build log.</span></p></div>
       <div class="slot key"><p class="slot-when">11:30–12:15</p><p class="slot-what"><b>Checkpoint</b><span>Three minutes per group: real, synthetic or not working, and what went wrong. Scope freezes here.</span></p></div>
       <div class="slot"><p class="slot-when">13:15–14:00</p><p class="slot-what"><b>AI comparison</b><span>Ask a general AI model what your municipality should build, and note where it is generic or wrong about Swedish municipal conditions.</span></p></div>
-      <div class="slot"><p class="slot-when">14:00–16:30</p><p class="slot-what"><b>Draft the specification and the presentation</b><span>No new features after 14:00. Write most of the specification while help is in the room.</span></p></div>
+      <div class="slot"><p class="slot-when">14:00–16:00</p><p class="slot-what"><b>Draft the specification and the presentation</b><span>From 14:00 the mockup stops growing: fix what breaks and take screenshots, but add no new features. Write most of the specification while help is in the room.</span></p></div>
     </div>
 
     <div class="sched-day">
-      <h3><i class="ri-presentation-line"></i>Friday 13 November</h3>
-      <div class="slot key"><p class="slot-when">09:00–11:45</p><p class="slot-what"><b>Presentations to a panel</b><span>8 minutes plus 7 minutes of questions per group. You present to a panel playing a municipal client and a supplier <span class="tbc">guests TBC</span>, who asks: could someone deliver against this specification, and what is unclear?</span></p></div>
-      <div class="slot"><p class="slot-when">12:00–17:00</p><p class="slot-what"><b>Revise after the panel's questions</b><span>No teaching.</span></p></div>
+      <h3><i class="ri-presentation-line"></i>Friday 13 November · C533</h3>
+      <div class="slot key"><p class="slot-when">09:15–12:00</p><p class="slot-what"><b>Presentations</b><span>Student presentations, with guests.</span></p></div>
+      <div class="slot"><p class="slot-when">12:00–17:00</p><p class="slot-what"><b>Work on your own until submission</b></p></div>
       <div class="slot key"><p class="slot-when">17:00</p><p class="slot-what"><b>Hand-in</b><span>Specification, mockup and build log.</span></p></div>
     </div>
   </div>
 </section>
+
 
 <section class="sec" id="deliverable">
   <div class="sec-head"><div class="sec-num"><i class="ri-draft-line"></i>03</div><h2>Deliverable</h2></div>
@@ -434,7 +431,7 @@ footer p{margin:0}
   <div class="sec-head"><div class="sec-num"><i class="ri-stack-line"></i>04</div><h2>Starting examples</h2></div>
   <div class="sec-body">
     <p class="lede">These are not a list to choose from. They are deliberately basic examples to try on the starter kit while you learn to vibecode.</p>
-    <p>Use them on Tuesday afternoon and Wednesday morning to get a feel for the kit, the data and the AI tool. Your group's project is your own function, defined on Wednesday: it can grow out of one of these, combine them, or go somewhere else entirely, as long as it serves a clear purpose for a named user. Helsingborg is the default case, because we hear from the people who run its model and the kit is built for it.</p>
+    <p>Use them on Tuesday afternoon to get a feel for the kit, the data and the AI tool. Your group's project is your own function, defined on Wednesday: it can grow out of one of these, combine them, or go somewhere else entirely, as long as it serves a clear purpose for a named user. Helsingborg is the default case, because we hear from the people who run its model and the kit is built for it.</p>
     <div class="note"><i class="ri-flask-line"></i><p><b>Starting points, not the destination.</b> Each example has a ready-made prompt in the kit's <code>docs/PROMPTS.md</code>. Expect to go further than any of them.</p></div>
     <div class="cards">
       <div class="card option"><div class="letter">A</div><h5>Example: sea level and buildings</h5><p>Show which buildings sit below a user-selected water level.</p><dl><dt>User</dt><dd>Plan architect drafting a waterfront detaljplan</dd><dt>Hard part</dt><dd>Projections are ranges, not one number</dd></dl></div>
@@ -491,7 +488,7 @@ footer p{margin:0}
     <p>You may choose another Swedish municipality instead of Helsingborg, if it serves your function better or you know it from work. Malmö (urban regeneration, climate adaptation, cycling), Göteborg (port, freight, climate resilience), Stockholm (metropolitan scale, multimodal transport) and Lund (university–city collaboration) are all reasonable. So is a smaller municipality you know.</p>
     <div class="note"><i class="ri-alert-line"></i>
       <div>
-        <p><b>Three conditions, agreed with the teacher by Wednesday 11:00:</b></p>
+        <p><b>Three conditions, agreed with the teacher by Wednesday 14:00:</b></p>
         <ul>
           <li>You can name the user role in that municipality and the purpose the function serves: a decision or an exploratory question.</li>
           <li>The data you need is openly available. Check with <a href="#data">data and tools</a> below.</li>
@@ -516,7 +513,7 @@ footer p{margin:0}
         <tr><td><b>Scope discipline</b></td><td>Something excluded, with a reason.</td></tr>
         <tr><td><b>Honesty about limits</b></td><td>Fake and failed parts of the mockup declared precisely, and fed into Risks. A faked mockup is fine; an undeclared one is not.</td></tr>
         <tr><td><b>Build log and AI comparison</b></td><td>What the model got wrong, what you changed, and where a general AI was generic or wrong about Swedish conditions.</td></tr>
-        <tr><td><b>Presentation</b></td><td>You defend the choice of function and answer the supplier's question.</td></tr>
+        <tr><td><b>Presentation</b></td><td>You defend the choice of function and answer questions about the specification.</td></tr>
       </tbody>
     </table></div>
   </div>
@@ -552,7 +549,7 @@ footer p{margin:0}
   <div class="sec-head"><div class="sec-num"><i class="ri-book-open-line"></i>07</div><h2>Resources</h2></div>
   <div class="sec-body">
     <h3><i class="ri-book-open-line"></i>Required readings</h3>
-    <p>Three readings, one for each point the week makes, all free to read. Read them before Wednesday, in this order. Each card has a twin on its back: flip it if the other version suits you better. Either side counts as the reading.</p>
+    <p><b>The minimum is one text from each of the three categories: Concept, Practice and Critique.</b> All are free to read. Read them before Wednesday's seminar, in this order. Each card has a twin on its back: flip it if the other version suits you better. Either side counts as the reading.</p>
     <div class="flips">
 
       <div class="flip" data-flip>
@@ -786,7 +783,7 @@ footer p{margin:0}
   <div class="sec-head"><div class="sec-num"><i class="ri-information-line"></i>10</div><h2>Practical</h2></div>
   <div class="sec-body">
     <div class="cards">
-      <div class="card"><h5><i class="ri-download-2-line"></i>Before Monday</h5><p>Download and unzip the starter kit from Documents, start the first required reading, and make sure you can join the online sessions.</p></div>
+      <div class="card"><h5><i class="ri-download-2-line"></i>Starter kit</h5><p>Download it from Documents. We check that it opens on everyone's laptop on Monday at 11:30.</p></div>
       <div class="card"><h5><i class="ri-team-line"></i>Groups</h5><p>Formed from the skills questionnaire and announced on Monday. <span class="tbc">size TBC</span></p></div>
       <div class="card"><h5><i class="ri-inbox-archive-line"></i>Hand-in</h5><p>Specification as PDF, mockup as a zipped folder, screenshots and build log. <span class="tbc">where TBC</span></p></div>
       <div class="card"><h5><i class="ri-chat-3-line"></i>Contact</h5><p>Javier Argota Sánchez-Vaquerizo<br><a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a></p></div>
@@ -797,7 +794,7 @@ footer p{margin:0}
 </main>
 
 <footer>
-  <p>Master in Sustainable Urban Planning and Design, Blekinge Institute of Technology. Contact: Javier Argota Sánchez-Vaquerizo, <a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a>. Last updated 5 November 2026.</p>
+  <p>Master in Sustainable Urban Planning and Design, Blekinge Institute of Technology. Contact: Javier Argota Sánchez-Vaquerizo, <a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a>. Last updated 6 November 2026.</p>
   <button class="theme-btn" type="button" id="theme"><i class="ri-contrast-2-line"></i>Light / dark</button>
 </footer>
 
