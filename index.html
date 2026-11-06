@@ -235,6 +235,10 @@ th{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercas
 .note p{margin:0 0 .5rem}.note p:last-child{margin:0}
 .note.lime{background:var(--lime);color:var(--on-lime)}
 .note.lime i{color:var(--on-lime)}
+.note.report{background:color-mix(in srgb,var(--c-report) 16%,var(--surface));border-left:5px solid var(--c-report)}
+.note.report i{color:var(--c-report)}
+a.person{color:inherit;text-decoration:underline dotted;text-underline-offset:3px}
+a.person:hover{color:var(--violet)}
 .tbc{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);border:1px dashed currentColor;padding:.08rem .4rem;border-radius:99px;white-space:nowrap;vertical-align:.12em}
 
 /* ---------- ecosystem ---------- */
@@ -321,7 +325,7 @@ footer p{margin:0}
       <ul>
         <li>Schedule now follows BTH's official timetable. Monday and Tuesday are on Zoom (links in Canvas); Wednesday to Friday are in person in C533.</li>
         <li>Each session is marked by type: lecture, Q&amp;A, seminar, work session, checkpoint, presentation or deadline.</li>
-        <li>Starter-kit check moved to Monday 11:30, done on your own.</li>
+        <li>Starter-kit check moved to Monday, between the two lectures, done on your own whenever suits you.</li>
         <li>New: Tuesday 11:15, Q&amp;A on the master's written report with Andrea Gimeno Sanchez. Literature seminar moved to Wednesday 10:00–12:00.</li>
         <li>Deliverable: three files in Canvas: the specification PDF (max 8 pages, annexes not counted), the presentation slides, and a zip with the code. Grading weights added.</li>
         <li>Presentations: 12 minutes per group, in person.</li>
@@ -354,7 +358,7 @@ footer p{margin:0}
     <ul>
       <li class="t-lecture"><span><b>09:15 · Lecture</b>Introduction to digital twins</span></li>
       <li class="t-qa"><span><b>11:00 · Q&amp;A</b>Questions on the lecture</span></li>
-      <li class="t-work"><span><b>11:30 · On your own</b>Starter-kit check</span></li>
+      <li class="t-work"><span><b>Midday · On your own</b>Starter-kit check, whenever suits you</span></li>
       <li class="t-lecture"><span><b>15:30 · Lecture</b>Municipal twins in theory and practice</span></li>
     </ul>
   </div>
@@ -450,9 +454,9 @@ footer p{margin:0}
 
     <div class="sched-day">
       <div class="day-banner"><h3><i class="ri-computer-line"></i>Monday 9 November</h3><span class="mode zoom"><i class="ri-video-chat-line"></i>Zoom · link in Canvas</span></div>
-      <div class="slot t-lecture"><p class="slot-when">09:15–11:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-lecture"><i class="ri-slideshow-3-line"></i>Lecture</span></div><b>Introduction to digital twins</b><span class="who">Javier Argota</span><span>Where the idea comes from, why cities are the hard case, and how to tell a model, a shadow and a twin apart. You use this distinction all week.</span><span class="po"><em>Prepare</em>Nothing.</span></div></div>
-      <div class="slot t-qa"><p class="slot-when">11:00–11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-qa"><i class="ri-question-answer-line"></i>Q&amp;A</span></div><b>Questions on the lecture</b><span class="who">Javier Argota</span><span>Your questions on the lecture, and a short introduction to what you hand in on Friday.</span></div></div>
-      <div class="slot t-work"><p class="slot-when">11:30–12:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Starter-kit check</b><span class="who">On your own</span><span>Open the starter kit on your own laptop and log into your AI assistant. If something does not work, ask at a later session or email Javier.</span><span class="po"><em>Prepare</em>Download the starter kit from <a href="#documents">Documents</a> and unzip it. Any AI assistant works; BTH's Copilot licence is enough.</span><span class="po"><em>Output</em>You see the 3D map of Helsingborg and can chat with your AI assistant. If it works, try the <a href="#options">starting examples</a>.</span></div></div>
+      <div class="slot t-lecture"><p class="slot-when">09:15–11:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-lecture"><i class="ri-slideshow-3-line"></i>Lecture</span></div><b>Introduction to digital twins</b><span class="who"><a class="person" href="#contact">Javier Argota</a></span><span>Where the idea comes from, why cities are the hard case, and how to tell a model, a shadow and a twin apart. You use this distinction all week.</span><span class="po"><em>Prepare</em>Nothing.</span></div></div>
+      <div class="slot t-qa"><p class="slot-when">11:00–11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-qa"><i class="ri-question-answer-line"></i>Q&amp;A</span></div><b>Questions on the lecture</b><span class="who"><a class="person" href="#contact">Javier Argota</a></span><span>Your questions on the lecture, and a short introduction to what you hand in on Friday.</span></div></div>
+      <div class="slot t-work"><p class="slot-when">After 11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Starter-kit check</b><span class="who">On your own, whenever suits you before 15:30</span><span>Any time between the Q&amp;A and Adam's lecture, around your lunch. Open the starter kit on your own laptop and log into your AI assistant. If something does not work, ask at a later session or email <a class="person" href="#contact">Javier</a>.</span><span class="po"><em>Prepare</em>Download the starter kit from <a href="#documents">Documents</a> and unzip it. Any AI assistant works; BTH's Copilot licence is enough.</span><span class="po"><em>Output</em>You see the 3D map of Helsingborg and can chat with your AI assistant. If it works, try the <a href="#options">starting examples</a>.</span></div></div>
       <div class="slot t-lecture"><p class="slot-when">15:30–17:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-lecture"><i class="ri-slideshow-3-line"></i>Lecture</span></div><b>Municipal digital twins in theory and practice</b><span class="who">Adam Sjödin, co-author of <i>Digital Vision Sverige</i> (2025)</span><span>The national vision for digital twins in Sweden.</span><span class="po"><em>Prepare</em>Nothing. <em>During</em>Note one place where his definition of a twin differs from the morning's.</span></div></div>
     </div>
 
@@ -460,28 +464,28 @@ footer p{margin:0}
       <div class="day-banner"><h3><i class="ri-building-2-line"></i>Tuesday 10 November</h3><span class="mode zoom"><i class="ri-video-chat-line"></i>Zoom · link in Canvas</span></div>
       <div class="slot t-work"><p class="slot-when">09:15–11:15</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Reading and writing, on your own</b><span>No session. Read at least one text from each of the three categories in <a href="#readings">required readings</a>.</span></div></div>
       <div class="slot t-report"><p class="slot-when">11:15–12:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-report"><i class="ri-quill-pen-line"></i>Master's written report</span></div><b>Q&amp;A: the written report</b><span class="who">Andrea Gimeno Sanchez</span><span>About the written report that runs through the whole master's. This is not this module's deliverable.</span></div></div>
-      <div class="slot t-lecture"><p class="slot-when">13:40–14:50</p><div class="slot-what"><div class="slot-tags"><span class="type t-lecture"><i class="ri-slideshow-3-line"></i>Lecture</span></div><b>Helsingborg municipality</b><span class="who">Trine Nykjär and Magnus Ihrefors</span><span>What Helsingborg actually has, why it is not yet a twin, "digital cousins", Gaussian splatting, and the Smart stad pre-study.</span><span>Two of their Gaussian splats: <a href="https://kartor.helsingborg.se/gaussionsplat/HFYzqlZQWzH36meQUSxi9Q/">Östra Ramlösa</a> and <a href="https://kartor.helsingborg.se/gaussionsplat/hmNKJWQTzb6tK7H0a71GnA/">Söderviadukten</a>.</span><span class="po"><em>Prepare</em>Nothing.</span></div></div>
-      <div class="slot t-work"><p class="slot-when">15:15–16:45</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Guided vibecoding</b><span class="who">In your group, with Javier on Zoom</span><span>Try the <a href="#options">starting examples</a> on the kit: make one change to the sea-level example the kit opens with, break it, and go back to the last saved copy.</span><span class="po"><em>Output</em>Your first build-log entry.</span></div></div>
+      <div class="slot t-lecture"><p class="slot-when">13:40–14:50</p><div class="slot-what"><div class="slot-tags"><span class="type t-lecture"><i class="ri-slideshow-3-line"></i>Lecture</span></div><b>Helsingborg municipality</b><span class="who">Trine Nykjär and Magnus Ihrefors</span><span>What Helsingborg actually has, why it is not yet a twin, "digital cousins", Gaussian splatting, and the Smart stad pre-study.</span><span>Two of their Gaussian splats: <a href="https://kartor.helsingborg.se/gaussionsplat/HFYzqlZQWzH36meQUSxi9Q/" target="_blank" rel="noopener">Östra Ramlösa</a> and <a href="https://kartor.helsingborg.se/gaussionsplat/hmNKJWQTzb6tK7H0a71GnA/" target="_blank" rel="noopener">Söderviadukten</a>.</span><span class="po"><em>Prepare</em>Nothing.</span></div></div>
+      <div class="slot t-work"><p class="slot-when">15:15–16:45</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Guided vibecoding</b><span class="who">In your group, with <a class="person" href="#contact">Javier</a> on Zoom</span><span>Try the <a href="#options">starting examples</a> on the kit: make one change to the sea-level example the kit opens with, break it, and go back to the last saved copy.</span><span class="po"><em>Output</em>Your first build-log entry.</span></div></div>
     </div>
 
     <div class="sched-day">
       <div class="day-banner"><h3><i class="ri-lightbulb-flash-line"></i>Wednesday 11 November</h3><span class="mode room"><i class="ri-map-pin-user-line"></i>In person · C533</span></div>
       <div class="slot t-seminar"><p class="slot-when">10:00–12:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-seminar"><i class="ri-discuss-line"></i>Seminar</span></div><b>Literature seminar</b><span class="who">Andrea Gimeno Sanchez</span><span>Discussion of the <a href="#readings">required readings</a>.</span><span class="po"><em>Prepare</em>At least one text from each of the three categories.</span></div></div>
-      <div class="slot t-check"><p class="slot-when">13:00–14:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-check"><i class="ri-flag-2-line"></i>Checkpoint</span></div><b>Define your function</b><span class="who">Javier in the room</span><span>Each group agrees its function with Javier.</span><span class="po"><em>Output</em>Accepted by 14:00: a purpose (a decision or an exploratory question), a named user role and a data source.</span></div></div>
-      <div class="slot t-work"><p class="slot-when">14:00–16:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Build version 0</b><span class="who">Javier in the room for questions</span><span>The simplest visible version, on real or synthetic data.</span><span class="po"><em>Output</em>Something on screen by 16:00.</span></div></div>
+      <div class="slot t-check"><p class="slot-when">13:00–14:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-check"><i class="ri-flag-2-line"></i>Checkpoint</span></div><b>Define your function</b><span class="who"><a class="person" href="#contact">Javier</a> in the room</span><span>Each group agrees its function with <a class="person" href="#contact">Javier</a>.</span><span class="po"><em>Output</em>Accepted by 14:00: a purpose (a decision or an exploratory question), a named user role and a data source.</span></div></div>
+      <div class="slot t-work"><p class="slot-when">14:00–16:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Build version 0</b><span class="who"><a class="person" href="#contact">Javier</a> in the room for questions</span><span>The simplest visible version, on real or synthetic data.</span><span class="po"><em>Output</em>Something on screen by 16:00.</span></div></div>
     </div>
 
     <div class="sched-day">
       <div class="day-banner"><h3><i class="ri-hammer-line"></i>Thursday 12 November</h3><span class="mode room"><i class="ri-map-pin-user-line"></i>In person · C533</span></div>
-      <div class="slot t-work"><p class="slot-when">09:15–11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Build</b><span class="who">Javier in the room for questions</span><span>Improve version 0 and keep the build log.</span></div></div>
-      <div class="slot t-check"><p class="slot-when">11:30–12:15</p><div class="slot-what"><div class="slot-tags"><span class="type t-check"><i class="ri-flag-2-line"></i>Checkpoint</span></div><b>Checkpoint: scope freezes</b><span class="who">Javier</span><span>Three minutes per group: what works, what is synthetic, what failed.</span><span class="po"><em>Output</em>Your scope is fixed. After this you finish what you have; you do not start anything new.</span></div></div>
-      <div class="slot t-work"><p class="slot-when">13:15–16:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Write the specification and the presentation</b><span class="who">Javier in the room for questions</span><span>From 14:00 the mockup stops growing: fix what breaks and take screenshots, but add no new features. Write most of the specification while help is in the room.</span></div></div>
+      <div class="slot t-work"><p class="slot-when">09:15–11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Build</b><span class="who"><a class="person" href="#contact">Javier</a> in the room for questions</span><span>Improve version 0 and keep the build log.</span></div></div>
+      <div class="slot t-check"><p class="slot-when">11:30–12:15</p><div class="slot-what"><div class="slot-tags"><span class="type t-check"><i class="ri-flag-2-line"></i>Checkpoint</span></div><b>Checkpoint: scope freezes</b><span class="who"><a class="person" href="#contact">Javier</a></span><span>Three minutes per group: what works, what is synthetic, what failed.</span><span class="po"><em>Output</em>Your scope is fixed. After this you finish what you have; you do not start anything new.</span></div></div>
+      <div class="slot t-work"><p class="slot-when">13:15–16:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Write the specification and the presentation</b><span class="who"><a class="person" href="#contact">Javier</a> in the room for questions</span><span>From 14:00 the mockup stops growing: fix what breaks and take screenshots, but add no new features. Write most of the specification while help is in the room.</span></div></div>
     </div>
 
     <div class="sched-day">
       <div class="day-banner"><h3><i class="ri-presentation-line"></i>Friday 13 November</h3><span class="mode room"><i class="ri-map-pin-user-line"></i>In person · C533</span></div>
       <div class="slot t-present"><p class="slot-when">09:15–12:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-present"><i class="ri-presentation-line"></i>Presentations</span></div><b>Group presentations</b><span class="who">With guests</span><span>12 minutes per group: about 8 minutes of show and tell, demonstrating what you built (or failed to build), then about 4 minutes of questions and changeover.</span><span class="po"><em>Prepare</em>Slides with a live demo of your mockup. You also hand in the slides as a file.</span></div></div>
-      <div class="slot t-work"><p class="slot-when">12:00–17:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Finish and submit, on your own</b><span class="who">Javier has left. Questions by email.</span></div></div>
+      <div class="slot t-work"><p class="slot-when">12:00–17:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Finish and submit, on your own</b><span class="who"><a class="person" href="#contact">Javier</a> has left. Questions by email.</span></div></div>
       <div class="slot t-deadline"><p class="slot-when">17:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-deadline"><i class="ri-timer-flash-line"></i>Deadline</span></div><b>Hand-in in Canvas</b><span>Three files per group: specification, slides and code. See <a href="#deliverable">Deliverable</a>.</span></div></div>
     </div>
 
@@ -493,7 +497,7 @@ footer p{margin:0}
   <div class="sec-head"><div class="sec-num"><i class="ri-draft-line"></i>03</div><h2>Deliverable</h2></div>
   <div class="sec-body">
     <p class="lede">Your group hands in a requirements specification (<i>kravspecifikation</i>) and the mockup that illustrates it, and presents both on Friday. Everything is done in your group.</p>
-    <div class="note"><i class="ri-quill-pen-line"></i><p><b>Not the written report.</b> The written report that Andrea introduces on Tuesday is a separate assignment for the whole master's. This page is only about this module's deliverable.</p></div>
+    <div class="note report"><i class="ri-quill-pen-line"></i><p><b>Not the written report.</b> The written report that Andrea introduces on Tuesday is a separate assignment for the whole master's. This page is only about this module's deliverable.</p></div>
 
     <h3><i class="ri-inbox-archive-line"></i>What you hand in</h3>
     <ol class="files">
@@ -635,13 +639,13 @@ footer p{margin:0}
         <div class="flip-inner">
           <div class="face front">
             <span class="badge">1 · Concept</span>
-            <p class="ref">Batty, M. (2024). <a href="https://doi.org/10.1038/s43588-024-00606-7">Digital twins in city planning</a>. <i>Nature Computational Science, 4</i>(3), 192–199. <a href="https://discovery.ucl.ac.uk/id/eprint/10190386/">Free author version</a></p>
+            <p class="ref">Batty, M. (2024). <a href="https://doi.org/10.1038/s43588-024-00606-7" target="_blank" rel="noopener">Digital twins in city planning</a>. <i>Nature Computational Science, 4</i>(3), 192–199. <a href="https://discovery.ucl.ac.uk/id/eprint/10190386/" target="_blank" rel="noopener">Free author version</a></p>
             <p class="guide">Short, written by an urbanist for planners. Read it for where twins help planning and where the idea breaks down.</p>
             <button type="button" class="flip-btn" aria-expanded="false"><i class="ri-arrow-left-right-line"></i>Want something crisper and more technical, but not applied to cities?</button>
           </div>
           <div class="face back">
             <span class="badge alt">1 · Concept, crisper</span>
-            <p class="ref">Wright, L., &amp; Davidson, S. (2020). <a href="https://doi.org/10.1186/s40323-020-00147-4">How to tell the difference between a model and a digital twin</a>. <i>Advanced Modeling and Simulation in Engineering Sciences, 7</i>, 13.</p>
+            <p class="ref">Wright, L., &amp; Davidson, S. (2020). <a href="https://doi.org/10.1186/s40323-020-00147-4" target="_blank" rel="noopener">How to tell the difference between a model and a digital twin</a>. <i>Advanced Modeling and Simulation in Engineering Sciences, 7</i>, 13.</p>
             <p class="trade"><b>You gain</b> a sharp test: a twin is a model, plus data that keeps changing, plus a way to update the model from that data. Without that link it is just a model. <b>You lose</b> the city: the examples come from engineering.</p>
             <button type="button" class="flip-btn" aria-expanded="true"><i class="ri-arrow-go-back-line"></i>Back to the planner's version</button>
           </div>
@@ -652,13 +656,13 @@ footer p{margin:0}
         <div class="flip-inner">
           <div class="face front">
             <span class="badge">2 · Practice</span>
-            <p class="ref">Kruse, E. N., Nielsen, T. T., &amp; de Neergaard, M. (2026). <a href="https://doi.org/10.1007/s43762-026-00299-w">From epistemic promises to real world practices: The ongoing becoming of 3D models and urban digital twins in municipal planning</a>. <i>Computational Urban Science, 6</i>, 62.</p>
+            <p class="ref">Kruse, E. N., Nielsen, T. T., &amp; de Neergaard, M. (2026). <a href="https://doi.org/10.1007/s43762-026-00299-w" target="_blank" rel="noopener">From epistemic promises to real world practices: The ongoing becoming of 3D models and urban digital twins in municipal planning</a>. <i>Computational Urban Science, 6</i>, 62.</p>
             <p class="guide">Two Swedish and one Danish municipality, followed over time. Skim the theory and read the cases.</p>
             <button type="button" class="flip-btn" aria-expanded="false"><i class="ri-arrow-left-right-line"></i>Want something easier to read, but not in Sweden?</button>
           </div>
           <div class="face back">
             <span class="badge alt">2 · Practice, easier</span>
-            <p class="ref">Herzog, R. H. (2025). <a href="https://doi.org/10.1080/09654313.2025.2582582">Towards hyperreal planning? Surveying practical uses of digital models and simulations in Hamburg's public administration</a>. <i>European Planning Studies, 34</i>(3), 603–623.</p>
+            <p class="ref">Herzog, R. H. (2025). <a href="https://doi.org/10.1080/09654313.2025.2582582" target="_blank" rel="noopener">Towards hyperreal planning? Surveying practical uses of digital models and simulations in Hamburg's public administration</a>. <i>European Planning Studies, 34</i>(3), 603–623.</p>
             <p class="trade"><b>You gain</b> plain planning language and a survey of what one administration actually uses. <b>You lose</b> the Swedish cases, which tie in with Tuesday.</p>
             <button type="button" class="flip-btn" aria-expanded="true"><i class="ri-arrow-go-back-line"></i>Back to the Swedish cases</button>
           </div>
@@ -669,13 +673,13 @@ footer p{margin:0}
         <div class="flip-inner">
           <div class="face front">
             <span class="badge">3 · Critique</span>
-            <p class="ref">de Wilde de Ligny, S., van Geldere, S., Schäfer, M. T., &amp; Meijer, A. J. (2025). <a href="https://doi.org/10.1177/14614448251338290">There is no such thing as a digital twin</a>. <i>New Media &amp; Society, 27</i>(8), 4420–4442.</p>
+            <p class="ref">de Wilde de Ligny, S., van Geldere, S., Schäfer, M. T., &amp; Meijer, A. J. (2025). <a href="https://doi.org/10.1177/14614448251338290" target="_blank" rel="noopener">There is no such thing as a digital twin</a>. <i>New Media &amp; Society, 27</i>(8), 4420–4442.</p>
             <p class="guide">Three years inside Dutch local government. The theory is dense: go straight to the findings.</p>
             <button type="button" class="flip-btn" aria-expanded="false"><i class="ri-arrow-left-right-line"></i>Want something easier to read, but without fieldwork?</button>
           </div>
           <div class="face back">
             <span class="badge alt">3 · Critique, easier</span>
-            <p class="ref">Mattern, S. (2017). <a href="https://doi.org/10.22269/170207">A city is not a computer</a>. <i>Places Journal</i>.</p>
+            <p class="ref">Mattern, S. (2017). <a href="https://doi.org/10.22269/170207" target="_blank" rel="noopener">A city is not a computer</a>. <i>Places Journal</i>.</p>
             <p class="trade"><b>You gain</b> a readable essay written for designers. <b>You lose</b> the fieldwork: it argues about smart cities in general, while Wednesday asks what governments actually did.</p>
             <button type="button" class="flip-btn" aria-expanded="true"><i class="ri-arrow-go-back-line"></i>Back to the fieldwork</button>
           </div>
@@ -690,13 +694,13 @@ footer p{margin:0}
     <details class="reading">
       <summary><i class="ri-git-branch-line"></i>Definitions: model, shadow, twin<span class="count">7</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li>Kritzinger, W., Karner, M., Traar, G., Henjes, J., &amp; Sihn, W. (2018). <a href="https://doi.org/10.1016/j.ifacol.2018.08.474">Digital twin in manufacturing: A categorical literature review and classification</a>. <i>IFAC-PapersOnLine, 51</i>(11), 1016–1022.<span class="oa">OA</span><span class="why">The source of the model, shadow and twin categories used in the Monday lecture.</span></li>
-        <li>Batty, M. (2018). <a href="https://doi.org/10.1177/2399808318796416">Digital twins</a>. <i>Environment and Planning B, 45</i>(5), 817–820.<span class="why">Three pages that brought the term to cities, and show how loose it became there.</span></li>
-        <li>Batty, M. (2024). <a href="https://doi.org/10.1038/s43588-024-00606-7">Digital twins in city planning</a>. <i>Nature Computational Science, 4</i>(3), 192–199. <a href="https://discovery.ucl.ac.uk/id/eprint/10190386/">Author version</a><span class="oa">OA</span></li>
-        <li>Masoumi, H., Shirowzhan, S., Eskandarpour, P., &amp; Pettit, C. J. (2023). <a href="https://doi.org/10.1080/20964471.2022.2160156">City digital twins: Their maturity level and differentiation from 3D city models</a>. <i>Big Earth Data, 7</i>(1), 1–36.<span class="oa">OA</span><span class="why">Directly asks whether a 3D city model is a twin.</span></li>
-        <li>Bonin, O., &amp; Frankhauser, P. (2025). <a href="https://doi.org/10.1177/23998083251318474">Digital twins versus simulation models and planning concepts</a>. <i>Environment and Planning B, 53</i>(4), 856–871.</li>
-        <li>Abdelrahman, M., Macatulad, E., Lei, B., Quintana, M., Miller, C., &amp; Biljecki, F. (2025). <a href="https://doi.org/10.1016/j.buildenv.2025.112748">What is a digital twin anyway? Deriving the definition for the built environment from over 15,000 scientific publications</a>. <i>Building and Environment, 274</i>, 112748. <a href="https://arxiv.org/abs/2409.19005">Preprint</a><span class="why">Uses language models to compare definitions across the literature. A good case for asking what an AI-derived consensus might miss.</span></li>
-        <li>Ferré-Bigorra, J., Casals, M., &amp; Gangolells, M. (2022). <a href="https://doi.org/10.1016/j.cities.2022.103905">The adoption of urban digital twins</a>. <i>Cities, 131</i>, 103905.<span class="oa">OA</span></li>
+        <li>Kritzinger, W., Karner, M., Traar, G., Henjes, J., &amp; Sihn, W. (2018). <a href="https://doi.org/10.1016/j.ifacol.2018.08.474" target="_blank" rel="noopener">Digital twin in manufacturing: A categorical literature review and classification</a>. <i>IFAC-PapersOnLine, 51</i>(11), 1016–1022.<span class="oa">OA</span><span class="why">The source of the model, shadow and twin categories used in the Monday lecture.</span></li>
+        <li>Batty, M. (2018). <a href="https://doi.org/10.1177/2399808318796416" target="_blank" rel="noopener">Digital twins</a>. <i>Environment and Planning B, 45</i>(5), 817–820.<span class="why">Three pages that brought the term to cities, and show how loose it became there.</span></li>
+        <li>Batty, M. (2024). <a href="https://doi.org/10.1038/s43588-024-00606-7" target="_blank" rel="noopener">Digital twins in city planning</a>. <i>Nature Computational Science, 4</i>(3), 192–199. <a href="https://discovery.ucl.ac.uk/id/eprint/10190386/" target="_blank" rel="noopener">Author version</a><span class="oa">OA</span></li>
+        <li>Masoumi, H., Shirowzhan, S., Eskandarpour, P., &amp; Pettit, C. J. (2023). <a href="https://doi.org/10.1080/20964471.2022.2160156" target="_blank" rel="noopener">City digital twins: Their maturity level and differentiation from 3D city models</a>. <i>Big Earth Data, 7</i>(1), 1–36.<span class="oa">OA</span><span class="why">Directly asks whether a 3D city model is a twin.</span></li>
+        <li>Bonin, O., &amp; Frankhauser, P. (2025). <a href="https://doi.org/10.1177/23998083251318474" target="_blank" rel="noopener">Digital twins versus simulation models and planning concepts</a>. <i>Environment and Planning B, 53</i>(4), 856–871.</li>
+        <li>Abdelrahman, M., Macatulad, E., Lei, B., Quintana, M., Miller, C., &amp; Biljecki, F. (2025). <a href="https://doi.org/10.1016/j.buildenv.2025.112748" target="_blank" rel="noopener">What is a digital twin anyway? Deriving the definition for the built environment from over 15,000 scientific publications</a>. <i>Building and Environment, 274</i>, 112748. <a href="https://arxiv.org/abs/2409.19005" target="_blank" rel="noopener">Preprint</a><span class="why">Uses language models to compare definitions across the literature. A good case for asking what an AI-derived consensus might miss.</span></li>
+        <li>Ferré-Bigorra, J., Casals, M., &amp; Gangolells, M. (2022). <a href="https://doi.org/10.1016/j.cities.2022.103905" target="_blank" rel="noopener">The adoption of urban digital twins</a>. <i>Cities, 131</i>, 103905.<span class="oa">OA</span></li>
       </ul>
     </details>
 
@@ -704,21 +708,21 @@ footer p{margin:0}
       <summary><i class="ri-government-line"></i>Swedish vision and standards<span class="count">3</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
         <li>Carlstedt et al. (2025). <i>Digital Vision Sverige: Nationell hubb för digitala tvillingar</i>. Smart Built Environment, RISE and Sweco. In Swedish.<span class="why">The report presented on Monday afternoon.</span></li>
-        <li>Uggla, M., Olsson, P.-O., Abdi, B., et al. (2023). <a href="https://doi.org/10.3390/ijgi12020047">Future Swedish 3D city models: Specifications, test data, and evaluation</a>. <i>ISPRS International Journal of Geo-Information, 12</i>(2), 47.<span class="oa">OA</span><span class="why">3CIM, the joint 3D city model specification of Stockholm, Göteborg and Malmö.</span></li>
-        <li>Eriksson, H., &amp; Harrie, L. (2021). <a href="https://doi.org/10.3390/ijgi10020055">Versioning of 3D city models for municipality applications</a>. <i>ISPRS International Journal of Geo-Information, 10</i>(2), 55.<span class="oa">OA</span><span class="why">Why municipal 3D models get rebuilt rather than updated.</span></li>
+        <li>Uggla, M., Olsson, P.-O., Abdi, B., et al. (2023). <a href="https://doi.org/10.3390/ijgi12020047" target="_blank" rel="noopener">Future Swedish 3D city models: Specifications, test data, and evaluation</a>. <i>ISPRS International Journal of Geo-Information, 12</i>(2), 47.<span class="oa">OA</span><span class="why">3CIM, the joint 3D city model specification of Stockholm, Göteborg and Malmö.</span></li>
+        <li>Eriksson, H., &amp; Harrie, L. (2021). <a href="https://doi.org/10.3390/ijgi10020055" target="_blank" rel="noopener">Versioning of 3D city models for municipality applications</a>. <i>ISPRS International Journal of Geo-Information, 10</i>(2), 55.<span class="oa">OA</span><span class="why">Why municipal 3D models get rebuilt rather than updated.</span></li>
       </ul>
     </details>
 
     <details class="reading">
       <summary><i class="ri-community-line"></i>Municipal practice in Sweden and beyond<span class="count">8</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li>Herzog, R. H. (2025). <a href="https://doi.org/10.1080/09654313.2025.2582582">Towards hyperreal planning? Surveying practical uses of digital models and simulations in Hamburg's public administration</a>. <i>European Planning Studies, 34</i>(3), 603–623.<span class="oa">OA</span></li>
-        <li>Maiullari, D., Nägeli, C., Rudenå, A., et al. (2024). <a href="https://doi.org/10.1177/23998083241286030">Digital twin for supporting decision-making and stakeholder collaboration in urban decarbonization processes: A participatory development in Gothenburg</a>. <i>Environment and Planning B, 53</i>(4), 831–855.<span class="oa">OA</span></li>
-        <li>El Masry, A., &amp; Chronéer, D. (2026). <a href="https://doi.org/10.3390/buildings16061185">Digitalization in local government: A socio-technical case study of a city planning department in a Swedish municipality</a>. <i>Buildings, 16</i>(6), 1185.<span class="oa">OA</span></li>
-        <li>Axelsson, K., &amp; Granath, M. (2018). <a href="https://doi.org/10.1016/j.giq.2018.09.001">Stakeholders' stake and relation to smartness in smart city development: Insights from a Swedish city planning project</a>. <i>Government Information Quarterly, 35</i>(4), 693–702.<span class="oa">OA</span></li>
-        <li>Dembski, F., Wössner, U., Letzgus, M., Ruddat, M., &amp; Yamu, C. (2020). <a href="https://doi.org/10.3390/su12062307">Urban digital twins for smart cities and citizens: The case study of Herrenberg, Germany</a>. <i>Sustainability, 12</i>(6), 2307.<span class="oa">OA</span><span class="why">A town of about 31,000 people.</span></li>
-        <li>White, G., Zink, A., Codecà, L., &amp; Clarke, S. (2021). <a href="https://doi.org/10.1016/j.cities.2020.103064">A digital twin smart city for citizen feedback</a>. <i>Cities, 110</i>, 103064.</li>
-        <li>Sundback, A., &amp; Perttula, I. (2023). <a href="https://bth.diva-portal.org/smash/get/diva2:1770019/FULLTEXT02"><i>Tillgänglighet och användbarhet för medborgaren i digitala översiktsplaner</i></a> [Bachelor's thesis, BTH]. In Swedish.<span class="oa">OA</span><span class="why">Lerum, Helsingborg, Eskilstuna and Sigtuna.</span></li>
+        <li>Herzog, R. H. (2025). <a href="https://doi.org/10.1080/09654313.2025.2582582" target="_blank" rel="noopener">Towards hyperreal planning? Surveying practical uses of digital models and simulations in Hamburg's public administration</a>. <i>European Planning Studies, 34</i>(3), 603–623.<span class="oa">OA</span></li>
+        <li>Maiullari, D., Nägeli, C., Rudenå, A., et al. (2024). <a href="https://doi.org/10.1177/23998083241286030" target="_blank" rel="noopener">Digital twin for supporting decision-making and stakeholder collaboration in urban decarbonization processes: A participatory development in Gothenburg</a>. <i>Environment and Planning B, 53</i>(4), 831–855.<span class="oa">OA</span></li>
+        <li>El Masry, A., &amp; Chronéer, D. (2026). <a href="https://doi.org/10.3390/buildings16061185" target="_blank" rel="noopener">Digitalization in local government: A socio-technical case study of a city planning department in a Swedish municipality</a>. <i>Buildings, 16</i>(6), 1185.<span class="oa">OA</span></li>
+        <li>Axelsson, K., &amp; Granath, M. (2018). <a href="https://doi.org/10.1016/j.giq.2018.09.001" target="_blank" rel="noopener">Stakeholders' stake and relation to smartness in smart city development: Insights from a Swedish city planning project</a>. <i>Government Information Quarterly, 35</i>(4), 693–702.<span class="oa">OA</span></li>
+        <li>Dembski, F., Wössner, U., Letzgus, M., Ruddat, M., &amp; Yamu, C. (2020). <a href="https://doi.org/10.3390/su12062307" target="_blank" rel="noopener">Urban digital twins for smart cities and citizens: The case study of Herrenberg, Germany</a>. <i>Sustainability, 12</i>(6), 2307.<span class="oa">OA</span><span class="why">A town of about 31,000 people.</span></li>
+        <li>White, G., Zink, A., Codecà, L., &amp; Clarke, S. (2021). <a href="https://doi.org/10.1016/j.cities.2020.103064" target="_blank" rel="noopener">A digital twin smart city for citizen feedback</a>. <i>Cities, 110</i>, 103064.</li>
+        <li>Sundback, A., &amp; Perttula, I. (2023). <a href="https://bth.diva-portal.org/smash/get/diva2:1770019/FULLTEXT02" target="_blank" rel="noopener"><i>Tillgänglighet och användbarhet för medborgaren i digitala översiktsplaner</i></a> [Bachelor's thesis, BTH]. In Swedish.<span class="oa">OA</span><span class="why">Lerum, Helsingborg, Eskilstuna and Sigtuna.</span></li>
         <li>Bongenhielm, V., &amp; Myhr, E. (2025). <i>Digitala tvillingar som verktyg för digitaliserad samhällsplanering</i> [Master's thesis, KTH]. DiVA, urn:nbn:se:kth:diva-380722. In Swedish.<span class="oa">OA</span></li>
       </ul>
     </details>
@@ -726,38 +730,38 @@ footer p{margin:0}
     <details class="reading">
       <summary><i class="ri-camera-lens-line"></i>3D capture, BIM and Gaussian splatting<span class="count">3</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li>Suwardhi, D., Sudibyo, M. A., Ambarwari, A., et al. (2026). <a href="https://doi.org/10.5194/isprs-archives-XLIX-B4-2026-81-2026">Bridging semantic mesh, CityGML, and Gaussian splatting for urban modelling and visualization</a>. <i>ISPRS Archives, XLIX-B4-2026</i>, 81–88.<span class="oa">OA</span><span class="why">Splats look real but hold no objects or attributes.</span></li>
-        <li>Kerbl, B., Kopanas, G., Leimkühler, T., &amp; Drettakis, G. (2023). <a href="https://doi.org/10.1145/3592433">3D Gaussian splatting for real-time radiance field rendering</a>. <i>ACM Transactions on Graphics, 42</i>(4). <a href="https://arxiv.org/abs/2308.04079">Preprint</a><span class="why">The original method paper. Technical.</span></li>
-        <li>Xia, H., Liu, Z., Efremochkina, M., Liu, X., &amp; Lin, C. (2022). <a href="https://doi.org/10.1016/j.scs.2022.104009">Study on city digital twin technologies for sustainable smart city design: GIS and BIM integration</a>. <i>Sustainable Cities and Society, 84</i>, 104009.</li>
+        <li>Suwardhi, D., Sudibyo, M. A., Ambarwari, A., et al. (2026). <a href="https://doi.org/10.5194/isprs-archives-XLIX-B4-2026-81-2026" target="_blank" rel="noopener">Bridging semantic mesh, CityGML, and Gaussian splatting for urban modelling and visualization</a>. <i>ISPRS Archives, XLIX-B4-2026</i>, 81–88.<span class="oa">OA</span><span class="why">Splats look real but hold no objects or attributes.</span></li>
+        <li>Kerbl, B., Kopanas, G., Leimkühler, T., &amp; Drettakis, G. (2023). <a href="https://doi.org/10.1145/3592433" target="_blank" rel="noopener">3D Gaussian splatting for real-time radiance field rendering</a>. <i>ACM Transactions on Graphics, 42</i>(4). <a href="https://arxiv.org/abs/2308.04079" target="_blank" rel="noopener">Preprint</a><span class="why">The original method paper. Technical.</span></li>
+        <li>Xia, H., Liu, Z., Efremochkina, M., Liu, X., &amp; Lin, C. (2022). <a href="https://doi.org/10.1016/j.scs.2022.104009" target="_blank" rel="noopener">Study on city digital twin technologies for sustainable smart city design: GIS and BIM integration</a>. <i>Sustainable Cities and Society, 84</i>, 104009.</li>
       </ul>
     </details>
 
     <details class="reading">
       <summary><i class="ri-scan-2-line"></i>Critique and governance<span class="count">3</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li>Vonk, G., Geertman, S., &amp; Schot, P. (2005). <a href="https://doi.org/10.1068/a3712">Bottlenecks blocking widespread usage of planning support systems</a>. <i>Environment and Planning A, 37</i>(5), 909–924. <a href="https://dspace.library.uu.nl/handle/1874/25769">Author version</a><span class="oa">OA</span><span class="why">Planners already failed to adopt planning support systems, for the same reasons twins stall now.</span></li>
-        <li>Mattern, S. (2017). <a href="https://doi.org/10.22269/170207">A city is not a computer</a>. <i>Places Journal</i>.<span class="oa">OA</span><span class="why">A readable essay rather than a paper.</span></li>
-        <li>Helbing, D., &amp; Argota Sánchez-Vaquerizo, J. (2023). <a href="https://doi.org/10.4337/9781800887374.00013">Digital twins: Potentials, ethical issues and limitations</a>. In <i>Handbook on the Politics and Governance of Big Data and Artificial Intelligence</i>. Edward Elgar. <a href="https://doi.org/10.2139/ssrn.4167963">Preprint</a></li>
+        <li>Vonk, G., Geertman, S., &amp; Schot, P. (2005). <a href="https://doi.org/10.1068/a3712" target="_blank" rel="noopener">Bottlenecks blocking widespread usage of planning support systems</a>. <i>Environment and Planning A, 37</i>(5), 909–924. <a href="https://dspace.library.uu.nl/handle/1874/25769" target="_blank" rel="noopener">Author version</a><span class="oa">OA</span><span class="why">Planners already failed to adopt planning support systems, for the same reasons twins stall now.</span></li>
+        <li>Mattern, S. (2017). <a href="https://doi.org/10.22269/170207" target="_blank" rel="noopener">A city is not a computer</a>. <i>Places Journal</i>.<span class="oa">OA</span><span class="why">A readable essay rather than a paper.</span></li>
+        <li>Helbing, D., &amp; Argota Sánchez-Vaquerizo, J. (2023). <a href="https://doi.org/10.4337/9781800887374.00013" target="_blank" rel="noopener">Digital twins: Potentials, ethical issues and limitations</a>. In <i>Handbook on the Politics and Governance of Big Data and Artificial Intelligence</i>. Edward Elgar. <a href="https://doi.org/10.2139/ssrn.4167963" target="_blank" rel="noopener">Preprint</a></li>
       </ul>
     </details>
 
     <details class="reading">
       <summary><i class="ri-code-s-slash-line"></i>Building with AI (vibecoding)<span class="count">5</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li>Sarkar, A., &amp; Drosos, I. (2025). <a href="https://doi.org/10.48550/arXiv.2506.23253">Vibe coding: Programming through conversation with artificial intelligence</a> [Preprint]. arXiv.<span class="oa">OA</span></li>
-        <li>Prather, J., Reeves, B. N., Leinonen, J., et al. (2024). <a href="https://doi.org/10.1145/3632620.3671116">The widening gap: The benefits and harms of generative AI for novice programmers</a>. <i>ICER 2024</i>, 469–486.<span class="oa">OA</span><span class="why">Why a false sense of progress is the main risk for beginners.</span></li>
-        <li>Gama, K., Calegário, F., Jackson, V., et al. (2026). <a href="https://doi.org/10.1145/3786580.3786992">"Can you feel the vibes?": An exploration of novice programmer engagement with vibe coding</a>. <i>ICSE 2026</i>, 485–496.<span class="oa">OA</span></li>
-        <li>Liu, M. X., Sarkar, A., Negreanu, C., et al. (2023). <a href="https://doi.org/10.1145/3544548.3580817">"What it wants me to say": Bridging the abstraction gap between end-user programmers and code-generating large language models</a>. <i>CHI 2023</i>.<span class="oa">OA</span></li>
-        <li>Malekzadeh, M. (2025). <a href="https://doi.org/10.1016/j.cities.2025.106497">Urban planners should not be afraid of AI</a>. <i>Cities, 168</i>, 106497.<span class="oa">OA</span></li>
+        <li>Sarkar, A., &amp; Drosos, I. (2025). <a href="https://doi.org/10.48550/arXiv.2506.23253" target="_blank" rel="noopener">Vibe coding: Programming through conversation with artificial intelligence</a> [Preprint]. arXiv.<span class="oa">OA</span></li>
+        <li>Prather, J., Reeves, B. N., Leinonen, J., et al. (2024). <a href="https://doi.org/10.1145/3632620.3671116" target="_blank" rel="noopener">The widening gap: The benefits and harms of generative AI for novice programmers</a>. <i>ICER 2024</i>, 469–486.<span class="oa">OA</span><span class="why">Why a false sense of progress is the main risk for beginners.</span></li>
+        <li>Gama, K., Calegário, F., Jackson, V., et al. (2026). <a href="https://doi.org/10.1145/3786580.3786992" target="_blank" rel="noopener">"Can you feel the vibes?": An exploration of novice programmer engagement with vibe coding</a>. <i>ICSE 2026</i>, 485–496.<span class="oa">OA</span></li>
+        <li>Liu, M. X., Sarkar, A., Negreanu, C., et al. (2023). <a href="https://doi.org/10.1145/3544548.3580817" target="_blank" rel="noopener">"What it wants me to say": Bridging the abstraction gap between end-user programmers and code-generating large language models</a>. <i>CHI 2023</i>.<span class="oa">OA</span></li>
+        <li>Malekzadeh, M. (2025). <a href="https://doi.org/10.1016/j.cities.2025.106497" target="_blank" rel="noopener">Urban planners should not be afraid of AI</a>. <i>Cities, 168</i>, 106497.<span class="oa">OA</span></li>
       </ul>
     </details>
 
     <details class="reading">
       <summary><i class="ri-robot-2-line"></i>AI in urban planning<span class="count">3</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li>Zhang, Y., Zhao, R., Huang, Z., Wang, X., Ma, Y., &amp; Long, Y. (2025). <a href="https://doi.org/10.48550/arXiv.2505.13803">GenAI models capture urban science but oversimplify complexity</a> [Preprint]. arXiv.<span class="oa">OA</span><span class="why">Vocabulary for Thursday's AI comparison.</span></li>
-        <li>Fu, X., Li, C., Quan, S. J., Yiğitcanlar, T., &amp; Wasserman, D. (2025). <a href="https://doi.org/10.1038/s44284-025-00261-7">Large language models in urban planning</a>. <i>Nature Cities, 2</i>(7), 585–592.</li>
-        <li>Siebenmann, M., Argota Sánchez-Vaquerizo, J., Müller Arisona, S., et al. (2026). <a href="https://doi.org/10.1109/cai68641.2026.11536530">OGD4All: Accessible interaction with geospatial open government data based on large language models</a>. <i>IEEE CAI 2026</i>, 882–888. <a href="https://arxiv.org/abs/2602.00012">Preprint</a></li>
+        <li>Zhang, Y., Zhao, R., Huang, Z., Wang, X., Ma, Y., &amp; Long, Y. (2025). <a href="https://doi.org/10.48550/arXiv.2505.13803" target="_blank" rel="noopener">GenAI models capture urban science but oversimplify complexity</a> [Preprint]. arXiv.<span class="oa">OA</span><span class="why">Vocabulary for Thursday's AI comparison.</span></li>
+        <li>Fu, X., Li, C., Quan, S. J., Yiğitcanlar, T., &amp; Wasserman, D. (2025). <a href="https://doi.org/10.1038/s44284-025-00261-7" target="_blank" rel="noopener">Large language models in urban planning</a>. <i>Nature Cities, 2</i>(7), 585–592.</li>
+        <li>Siebenmann, M., Argota Sánchez-Vaquerizo, J., Müller Arisona, S., et al. (2026). <a href="https://doi.org/10.1109/cai68641.2026.11536530" target="_blank" rel="noopener">OGD4All: Accessible interaction with geospatial open government data based on large language models</a>. <i>IEEE CAI 2026</i>, 882–888. <a href="https://arxiv.org/abs/2602.00012" target="_blank" rel="noopener">Preprint</a></li>
       </ul>
     </details>
   </div>
@@ -768,7 +772,7 @@ footer p{margin:0}
   <div class="sec-body">
     <p class="lede">A municipal twin is rarely one platform. It is a federation of datasets owned by different organisations at different levels.</p>
     <p><b>Optional reference.</b> Use it when you need data, not as reading. A curated starting point, not a complete list. Each entry says what it offers and what it takes to get it. <span class="kit">KIT</span> marks data that can go straight into the starter kit as a downloaded file. Live feeds and APIs usually cannot, because the kit runs without a server: describe them in your specification instead.</p>
-    <div class="note"><i class="ri-plug-line"></i><p><b>Want to use a live API in your mockup?</b> Ask Javier first. Some need a key, some refuse requests from a page opened as a file, and we can check together whether yours works before you build on it.</p></div>
+    <div class="note"><i class="ri-plug-line"></i><p><b>Want to use a live API in your mockup?</b> Ask <a class="person" href="#contact">Javier</a> first. Some need a key, some refuse requests from a page opened as a file, and we can check together whether yours works before you build on it.</p></div>
 
     <h4>Ask of every dataset</h4>
     <ol class="questions">
@@ -782,46 +786,46 @@ footer p{margin:0}
     <details class="reading">
       <summary><i class="ri-flag-line"></i>Swedish national sources<span class="count">7</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li><b>Lantmäteriet</b>: <a href="https://www.lantmateriet.se/sv/geodata/vara-produkter/avgiftsfria-produkter/oppna-data/">open geodata</a>. Building footprints, addresses, the national elevation model (1–2 m), orthophotos, hydrography, boundaries.<span class="kit">KIT</span><span class="why">Downloads go through Geotorget and need an account, which can take days to approve. Apply early if you want it.</span></li>
-        <li><b>SMHI</b>: <a href="https://www.smhi.se/klimat/framtidens-klimat/stigande-havsnivaer/framtida-medelvattenstand/projektioner">future mean sea level</a> per coastal municipality, by scenario and decade (2030–2150), in RH 2000. Also <a href="https://opendata.smhi.se/">open data</a> and an <a href="https://opendata.smhi.se/metobs/api">observations API</a>.<span class="kit">KIT</span><span class="why">The projections are what option A needs. Mean level only: storm surges come on top.</span></li>
-        <li><b>SCB</b>: <a href="https://www.scb.se/vara-tjanster/oppna-data/oppna-geodata/">open geodata</a>. Population by grid, DeSO and RegSO areas, built-up areas.<span class="kit">KIT</span><span class="why">The base for any synthetic population or gravity model.</span></li>
-        <li><b>Trafikverket</b>: <a href="https://www.trafikverket.se/e-tjanster/trafikverkets-oppna-api-for-trafikinformation/">open traffic API</a>. Road works, disruptions, road conditions, rail, ferries, road weather. Real time.<span class="why">Free API key. Describe in the specification rather than build.</span></li>
-        <li><b>Geodataportalen</b>: <a href="https://www.lantmateriet.se/sv/geodata/Geodataportalen/">national geodata catalogue</a>, run by Lantmäteriet.<span class="why">A search tool, not a download. Terms depend on each provider.</span></li>
-        <li><b>Boverket</b>: <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/detaljplan/digitalisering/">digital detailed plans</a>.<span class="why">For a specification that links a function to plan decisions. How many of a municipality's plans are digital varies.</span></li>
-        <li><b>Sveriges dataportal</b>: <a href="https://www.dataportal.se/">dataportal.se</a>, the national catalogue of open data from public bodies.<span class="why">Good for checking whether a municipality publishes what you need.</span></li>
+        <li><b>Lantmäteriet</b>: <a href="https://www.lantmateriet.se/sv/geodata/vara-produkter/avgiftsfria-produkter/oppna-data/" target="_blank" rel="noopener">open geodata</a>. Building footprints, addresses, the national elevation model (1–2 m), orthophotos, hydrography, boundaries.<span class="kit">KIT</span><span class="why">Downloads go through Geotorget and need an account, which can take days to approve. Apply early if you want it.</span></li>
+        <li><b>SMHI</b>: <a href="https://www.smhi.se/klimat/framtidens-klimat/stigande-havsnivaer/framtida-medelvattenstand/projektioner" target="_blank" rel="noopener">future mean sea level</a> per coastal municipality, by scenario and decade (2030–2150), in RH 2000. Also <a href="https://opendata.smhi.se/" target="_blank" rel="noopener">open data</a> and an <a href="https://opendata.smhi.se/metobs/api" target="_blank" rel="noopener">observations API</a>.<span class="kit">KIT</span><span class="why">The projections are what option A needs. Mean level only: storm surges come on top.</span></li>
+        <li><b>SCB</b>: <a href="https://www.scb.se/vara-tjanster/oppna-data/oppna-geodata/" target="_blank" rel="noopener">open geodata</a>. Population by grid, DeSO and RegSO areas, built-up areas.<span class="kit">KIT</span><span class="why">The base for any synthetic population or gravity model.</span></li>
+        <li><b>Trafikverket</b>: <a href="https://www.trafikverket.se/e-tjanster/trafikverkets-oppna-api-for-trafikinformation/" target="_blank" rel="noopener">open traffic API</a>. Road works, disruptions, road conditions, rail, ferries, road weather. Real time.<span class="why">Free API key. Describe in the specification rather than build.</span></li>
+        <li><b>Geodataportalen</b>: <a href="https://www.lantmateriet.se/sv/geodata/Geodataportalen/" target="_blank" rel="noopener">national geodata catalogue</a>, run by Lantmäteriet.<span class="why">A search tool, not a download. Terms depend on each provider.</span></li>
+        <li><b>Boverket</b>: <a href="https://www.boverket.se/sv/PBL-kunskapsbanken/detaljplan/digitalisering/" target="_blank" rel="noopener">digital detailed plans</a>.<span class="why">For a specification that links a function to plan decisions. How many of a municipality's plans are digital varies.</span></li>
+        <li><b>Sveriges dataportal</b>: <a href="https://www.dataportal.se/" target="_blank" rel="noopener">dataportal.se</a>, the national catalogue of open data from public bodies.<span class="why">Good for checking whether a municipality publishes what you need.</span></li>
       </ul>
     </details>
 
     <details class="reading">
       <summary><i class="ri-home-4-line"></i>Municipal and regional sources<span class="count">5</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li><b>Helsingborg</b>: <a href="https://helsingborg.io/dataportal/">open data portal</a>. 3D buildings, LiDAR (2019), orthophotos, base map, addresses, contours, delivery data, and hourly air quality (<i>Luften i Helsingborg</i>).<span class="why">The 3D buildings are SketchUp tiles dated 2014, geometry only, no attributes. Accurate, maintained by hand, not queryable: a good example for option B. The city is reviewing its open data, so some sets may be missing for a while.</span></li>
-        <li><b>Malmö</b>: <a href="https://opendata.malmo.se/">open data portal</a>.<span class="why">For groups working on Malmö, including the Södra Förstadsgatan reference project.</span></li>
-        <li><b>Göteborg</b>: <a href="https://data.goteborg.se/">open data</a> from Stadsmiljöförvaltningen.<span class="why">Needs a free account and a key.</span></li>
-        <li><b>Stockholm</b>: <a href="https://openstreetgs.stockholm.se/home">traffic and street data</a> (WMS, WFS, OGC API, parking).<span class="why">Free to reuse unless stated otherwise.</span></li>
-        <li><b>Trafiklab</b>: <a href="https://www.trafiklab.se/">national public transport data</a>, including Skånetrafiken. GTFS timetables and stops, plus real-time feeds.<span class="kit">KIT</span><span class="why">Timetables and stops work as a file. Real-time feeds need a key and a server.</span></li>
+        <li><b>Helsingborg</b>: <a href="https://helsingborg.io/dataportal/" target="_blank" rel="noopener">open data portal</a>. 3D buildings, LiDAR (2019), orthophotos, base map, addresses, contours, delivery data, and hourly air quality (<i>Luften i Helsingborg</i>).<span class="why">The 3D buildings are SketchUp tiles dated 2014, geometry only, no attributes. Accurate, maintained by hand, not queryable: a good example for option B. The city is reviewing its open data, so some sets may be missing for a while.</span></li>
+        <li><b>Malmö</b>: <a href="https://opendata.malmo.se/" target="_blank" rel="noopener">open data portal</a>.<span class="why">For groups working on Malmö, including the Södra Förstadsgatan reference project.</span></li>
+        <li><b>Göteborg</b>: <a href="https://data.goteborg.se/" target="_blank" rel="noopener">open data</a> from Stadsmiljöförvaltningen.<span class="why">Needs a free account and a key.</span></li>
+        <li><b>Stockholm</b>: <a href="https://openstreetgs.stockholm.se/home" target="_blank" rel="noopener">traffic and street data</a> (WMS, WFS, OGC API, parking).<span class="why">Free to reuse unless stated otherwise.</span></li>
+        <li><b>Trafiklab</b>: <a href="https://www.trafiklab.se/" target="_blank" rel="noopener">national public transport data</a>, including Skånetrafiken. GTFS timetables and stops, plus real-time feeds.<span class="kit">KIT</span><span class="why">Timetables and stops work as a file. Real-time feeds need a key and a server.</span></li>
       </ul>
     </details>
 
     <details class="reading">
       <summary><i class="ri-global-line"></i>Global and large-scale<span class="count">4</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li><b>Overture Maps</b>: <a href="https://overturemaps.org">overturemaps.org</a>. Buildings, transport, places.<span class="kit">KIT</span><span class="why">The starter kit's buildings come from here. 56% of them have no height and are set to 6 m. In central Helsingborg the city's own model shows they are closer to 19 m.</span></li>
-        <li><b>OpenStreetMap</b>: <a href="https://www.openstreetmap.org">openstreetmap.org</a>. Streets, paths, cycleways, stops, amenities, parks, land use.<span class="kit">KIT</span><span class="why">Already inside Overture. Heights mostly missing.</span></li>
-        <li><b>Copernicus</b>: <a href="https://dataspace.copernicus.eu">Data Space</a>. Satellite imagery, elevation, land cover.<span class="kit">KIT</span><span class="why">The kit's ground elevation is the 30 m Copernicus model: fine for a first look, too coarse for a flood assessment.</span></li>
-        <li><b>GHSL, Global Human Settlement Layer</b>: <a href="https://human-settlement.emergency.copernicus.eu/">EU Joint Research Centre</a>. Built-up area, population and degree of urbanisation on global grids, 1975–2030.<span class="kit">KIT</span><span class="why">For large-scale urban analytics: how Helsingborg's built-up area grew, or how it compares with other cities. Grid cells, not buildings.</span></li>
+        <li><b>Overture Maps</b>: <a href="https://overturemaps.org" target="_blank" rel="noopener">overturemaps.org</a>. Buildings, transport, places.<span class="kit">KIT</span><span class="why">The starter kit's buildings come from here. 56% of them have no height and are set to 6 m. In central Helsingborg the city's own model shows they are closer to 19 m.</span></li>
+        <li><b>OpenStreetMap</b>: <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">openstreetmap.org</a>. Streets, paths, cycleways, stops, amenities, parks, land use.<span class="kit">KIT</span><span class="why">Already inside Overture. Heights mostly missing.</span></li>
+        <li><b>Copernicus</b>: <a href="https://dataspace.copernicus.eu" target="_blank" rel="noopener">Data Space</a>. Satellite imagery, elevation, land cover.<span class="kit">KIT</span><span class="why">The kit's ground elevation is the 30 m Copernicus model: fine for a first look, too coarse for a flood assessment.</span></li>
+        <li><b>GHSL, Global Human Settlement Layer</b>: <a href="https://human-settlement.emergency.copernicus.eu/" target="_blank" rel="noopener">EU Joint Research Centre</a>. Built-up area, population and degree of urbanisation on global grids, 1975–2030.<span class="kit">KIT</span><span class="why">For large-scale urban analytics: how Helsingborg's built-up area grew, or how it compares with other cities. Grid cells, not buildings.</span></li>
       </ul>
     </details>
 
     <details class="reading">
       <summary><i class="ri-pulse-line"></i>Real-time and activity data<span class="count">5</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
-        <li><b>Before you start:</b> ask Javier if you want to use any of these live. Recording a day and replaying it is the safe alternative.</li>
-        <li><b>Air quality, Helsingborg</b>: hourly NO₂, SO₂, ozone, PM10 and PM2.5 through the <a href="https://helsingborg.io/dataportal/">city's portal</a>.<span class="why">The only live municipal feed on this list.</span></li>
-        <li><b>Weather and sea level, SMHI</b>: the <a href="https://opendata.smhi.se/metobs/api">observations API</a>, near real time.</li>
-        <li><b>Public transport, Trafiklab</b>: <a href="https://www.trafiklab.se/api">GTFS-Realtime</a> vehicle positions and delays.</li>
-        <li><b>Telraam</b>: <a href="https://telraam.net">citizen-run traffic counters</a> counting pedestrians, cyclists, cars and heavy vehicles, with an open API.<span class="why">Coverage depends on where volunteers have placed a counter.</span></li>
-        <li><b>Telia Crowd Insights</b>: <a href="https://business.teliacompany.com/crowd-insights/how-it-works">people-movement statistics</a> from the mobile network.<span class="why">This is how a municipality would know how many people visit a square. It is commercial and built on personal data, so it cannot go in your mockup, but your specification can require it: who buys it, at what resolution, and under which GDPR basis.</span></li>
+        <li><b>Before you start:</b> ask <a class="person" href="#contact">Javier</a> if you want to use any of these live. Recording a day and replaying it is the safe alternative.</li>
+        <li><b>Air quality, Helsingborg</b>: hourly NO₂, SO₂, ozone, PM10 and PM2.5 through the <a href="https://helsingborg.io/dataportal/" target="_blank" rel="noopener">city's portal</a>.<span class="why">The only live municipal feed on this list.</span></li>
+        <li><b>Weather and sea level, SMHI</b>: the <a href="https://opendata.smhi.se/metobs/api" target="_blank" rel="noopener">observations API</a>, near real time.</li>
+        <li><b>Public transport, Trafiklab</b>: <a href="https://www.trafiklab.se/api" target="_blank" rel="noopener">GTFS-Realtime</a> vehicle positions and delays.</li>
+        <li><b>Telraam</b>: <a href="https://telraam.net" target="_blank" rel="noopener">citizen-run traffic counters</a> counting pedestrians, cyclists, cars and heavy vehicles, with an open API.<span class="why">Coverage depends on where volunteers have placed a counter.</span></li>
+        <li><b>Telia Crowd Insights</b>: <a href="https://business.teliacompany.com/crowd-insights/how-it-works" target="_blank" rel="noopener">people-movement statistics</a> from the mobile network.<span class="why">This is how a municipality would know how many people visit a square. It is commercial and built on personal data, so it cannot go in your mockup, but your specification can require it: who buys it, at what resolution, and under which GDPR basis.</span></li>
       </ul>
     </details>
 
@@ -829,9 +833,9 @@ footer p{margin:0}
       <summary><i class="ri-flask-line"></i>Synthetic data and simulation<span class="count">5</span><i class="ri-add-line chev"></i></summary>
       <ul class="refs">
         <li><b>Prompting for synthetic data.</b> Ask the AI to generate data inside the page, not a separate file, and to label it. For example: <i>"Create 2,000 synthetic trips between the kit's buildings using a gravity model: trips between two places grow with their sizes (use footprint area × height) and fall with distance squared. Show them as lines whose thickness is the number of trips. Label everything 'synthetic'."</i><span class="why">Synthetic is fine if you declare it. The finding is which real data would replace it, and who holds that data.</span></li>
-        <li><b>SunCalc</b>: <a href="https://github.com/mourner/suncalc">sun position in JavaScript</a> (BSD-2-Clause).<span class="why">Small enough to save into the kit. Enough for "where is the sun at 15:00 on 21 March", and rough shadow lengths from building heights.</span></li>
-        <li><b>UMEP for QGIS</b>: <a href="https://umep-docs.readthedocs.io/">urban climate tools</a>: solar radiation, shadows, thermal comfort, sky view.<span class="why">Open source. What a municipality's analyst would use for the real version of a solar or heat study.</span></li>
-        <li><b>Eclipse SUMO</b>: <a href="https://eclipse.dev/sumo/">traffic microsimulation</a>, open source.<span class="why">Real traffic and pedestrian simulation, but an installed program. Name it in the specification as the tool behind a full version.</span></li>
+        <li><b>SunCalc</b>: <a href="https://github.com/mourner/suncalc" target="_blank" rel="noopener">sun position in JavaScript</a> (BSD-2-Clause).<span class="why">Small enough to save into the kit. Enough for "where is the sun at 15:00 on 21 March", and rough shadow lengths from building heights.</span></li>
+        <li><b>UMEP for QGIS</b>: <a href="https://umep-docs.readthedocs.io/" target="_blank" rel="noopener">urban climate tools</a>: solar radiation, shadows, thermal comfort, sky view.<span class="why">Open source. What a municipality's analyst would use for the real version of a solar or heat study.</span></li>
+        <li><b>Eclipse SUMO</b>: <a href="https://eclipse.dev/sumo/" target="_blank" rel="noopener">traffic microsimulation</a>, open source.<span class="why">Real traffic and pedestrian simulation, but an installed program. Name it in the specification as the tool behind a full version.</span></li>
         <li><b>Wind and street canyons.</b> Proper wind simulation needs CFD software and days of set-up. In the kit you can compute an indicator instead, such as the ratio of building height to street width.<span class="why">Say clearly in Annex A that it is an indicator, not a simulation.</span></li>
       </ul>
     </details>
@@ -845,7 +849,7 @@ footer p{margin:0}
         <tr><td><b>C</b> Massing sketch</td><td>Overture buildings, heights partly estimated</td><td>Helsingborg's 3D model for real heights, Lantmäteriet footprints</td></tr>
       </tbody>
     </table></div>
-    <div class="note lime"><i class="ri-focus-3-line"></i><p>A twin is not defined by how realistic it looks. It is a model, plus an evolving set of data about a real object, plus a way to update the model from that data (<a href="https://doi.org/10.1186/s40323-020-00147-4">Wright &amp; Davidson, 2020</a>). On why a detailed 3D city model is not yet a twin, see <a href="https://doi.org/10.1080/20964471.2022.2160156">Masoumi et al., 2023</a>.</p></div>
+    <div class="note lime"><i class="ri-focus-3-line"></i><p>A twin is not defined by how realistic it looks. It is a model, plus an evolving set of data about a real object, plus a way to update the model from that data (<a href="https://doi.org/10.1186/s40323-020-00147-4" target="_blank" rel="noopener">Wright &amp; Davidson, 2020</a>). On why a detailed 3D city model is not yet a twin, see <a href="https://doi.org/10.1080/20964471.2022.2160156" target="_blank" rel="noopener">Masoumi et al., 2023</a>.</p></div>
   </div>
 </section>
 
@@ -862,10 +866,10 @@ footer p{margin:0}
   <div class="sec-body">
     <div class="cards">
       <div class="card"><h5><i class="ri-video-chat-line"></i>Zoom</h5><p>Monday and Tuesday are on Zoom. The links are in Canvas, not on this page. Wednesday to Friday are in person in C533, with no Zoom.</p></div>
-      <div class="card"><h5><i class="ri-download-2-line"></i>Starter kit</h5><p>Download it from Documents and check that it opens on your laptop on Monday at 11:30, on your own. If it does not, ask at a later session or email Javier.</p></div>
+      <div class="card"><h5><i class="ri-download-2-line"></i>Starter kit</h5><p>Download it from Documents and check that it opens on your laptop on Monday, on your own, any time between the two lectures. If it does not, ask at a later session or email <a class="person" href="#contact">Javier</a>.</p></div>
       <div class="card"><h5><i class="ri-team-line"></i>Groups</h5><p>Groups are already assigned. All work and all files are per group.</p></div>
       <div class="card"><h5><i class="ri-inbox-archive-line"></i>Hand-in</h5><p>In Canvas, Friday 13 November, 17:00: specification, slides and code, per group. See <a href="#deliverable">Deliverable</a>.</p></div>
-      <div class="card"><h5><i class="ri-chat-3-line"></i>Contact</h5><p>Javier Argota Sánchez-Vaquerizo<br><a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a></p></div>
+      <div class="card" id="contact"><h5><i class="ri-chat-3-line"></i>Contact</h5><p>Javier Argota Sánchez-Vaquerizo<br><a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a></p></div>
     </div>
   </div>
 </section>
@@ -974,7 +978,7 @@ footer p{margin:0}
           var li = document.createElement("li"), ic = document.createElement("i"), a = document.createElement("a"), s = document.createElement("span");
           var ext = (f.path.split(".").pop() || "").toLowerCase();
           ic.className = ICONS[ext] || "ri-file-line";
-          a.href = f.path.split("/").map(encodeURIComponent).join("/");
+          a.href = f.path.split("/").map(encodeURIComponent).join("/"); a.target = "_blank"; a.rel = "noopener";
           a.textContent = f.path.split("/").slice(2).join("/") || f.path.split("/").pop();
           s.className = "doc-size"; s.textContent = size(f.size || 0);
           li.appendChild(ic); li.appendChild(a); li.appendChild(s); ul.appendChild(li);
