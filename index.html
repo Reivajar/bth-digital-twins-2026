@@ -239,6 +239,10 @@ th{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercas
 .note.report i{color:var(--c-report)}
 a.person{color:inherit;text-decoration:underline dotted;text-underline-offset:3px}
 a.person:hover{color:var(--violet)}
+@keyframes flash{0%,100%{box-shadow:0 0 0 0 transparent;background:var(--surface)}25%,75%{box-shadow:0 0 0 4px var(--violet);background:var(--lime);color:var(--on-lime)}50%{box-shadow:0 0 0 2px var(--violet);background:var(--surface)}}
+.card.flash{animation:flash 1.2s ease-in-out 2}
+.card.flash a{color:inherit}
+@media (prefers-reduced-motion: reduce){.card.flash{animation:none;box-shadow:0 0 0 4px var(--violet);background:var(--lime);color:var(--on-lime)}}
 .tbc{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);border:1px dashed currentColor;padding:.08rem .4rem;border-radius:99px;white-space:nowrap;vertical-align:.12em}
 
 /* ---------- ecosystem ---------- */
@@ -921,6 +925,16 @@ footer p{margin:0}
     requestAnimationFrame(function(){ el.scrollIntoView(); });
   }
   window.addEventListener("hashchange", openFromHash);
+  function flash(el){ el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+    setTimeout(function(){ el.classList.remove("flash"); }, 2600); }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest('a[href="#contact"]'); if(!a) return;
+    var el = document.getElementById("contact"); if(!el) return;
+    e.preventDefault();
+    var sec = el.closest("section.sec"); if(sec && sec._open) sec._open();
+    if(history.replaceState) history.replaceState(null, "", "#contact");
+    requestAnimationFrame(function(){ el.scrollIntoView({behavior:"smooth", block:"center"}); setTimeout(function(){ flash(el); }, 350); });
+  });
   document.addEventListener("click", function(e){
     var a = e.target.closest('a[href^="#"]'); if(!a) return;
     var id = a.getAttribute("href").slice(1), el = id && document.getElementById(id);
