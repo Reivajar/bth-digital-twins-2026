@@ -201,6 +201,17 @@ h4{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercas
 .files code{display:inline-block;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:.35rem .6rem;font-size:.85rem;white-space:nowrap}
 @media (max-width:900px){.files li{grid-template-columns:1fr}.files code{white-space:normal;overflow-wrap:anywhere;justify-self:start}}
 
+/* ---------- download buttons ---------- */
+.dl-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.25rem 0 0;align-items:center;align-content:flex-start;align-self:start}
+a.dl{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:.92rem;text-decoration:none;padding:.5rem .95rem;border-radius:99px;border:2px solid var(--ink);color:var(--ink);background:var(--surface)}
+a.dl.primary{background:var(--ink);color:var(--bg)}
+a.dl:hover{background:var(--lime);color:var(--on-lime);border-color:var(--lime)}
+a.dl small{font-weight:500;opacity:.75}
+.hero .dl-row{grid-column:1/8;grid-row:3}
+.hero .standfirst{grid-row:2}
+.hero .facts{grid-row:2/span 2}
+@media (max-width:860px){.hero .dl-row,.hero .standfirst,.hero .facts{grid-column:1/-1;grid-row:auto}}
+
 /* ---------- cards ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:1rem;margin:0 0 1rem}
 .card{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:1.2rem 1.2rem 1.1rem;display:flex;flex-direction:column;gap:.5rem}
@@ -337,6 +348,11 @@ footer p{margin:0}
 <header class="hero">
   <h1><span class="h1-top">Digital twins for</span> <em>urban planning</em></h1>
   <p class="standfirst">What digital twins are, what Swedish municipalities actually have, and how to specify something worth building.</p>
+  <div class="dl-row">
+    <a class="dl primary" href="files/starter-kit/helsingborg-starter-kit.zip" download><i class="ri-folder-zip-line"></i>Starter kit <small>zip, 0.6 MB</small></a>
+    <a class="dl" href="starter-kit/START-HERE.html" target="_blank" rel="noopener"><i class="ri-guide-line"></i>Step-by-step guide</a>
+    <a class="dl" href="files/templates/requirement-brief-template.docx" download><i class="ri-file-word-2-line"></i>Specification template <small>Word</small></a>
+  </div>
   <dl class="facts">
     <div><dt><i class="ri-calendar-line"></i>Dates</dt><dd>9–13 November 2026</dd></div>
     <div><dt><i class="ri-map-pin-2-line"></i>Where</dt><dd>Mon–Tue on Zoom (link in Canvas) · Wed–Fri in person, C533</dd></div>
@@ -450,7 +466,7 @@ footer p{margin:0}
       <div class="day-banner"><h3><i class="ri-computer-line"></i>Monday 9 November</h3><span class="mode zoom"><i class="ri-video-chat-line"></i>Zoom · link in Canvas</span></div>
       <div class="slot t-lecture"><p class="slot-when">09:15–11:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-lecture"><i class="ri-slideshow-3-line"></i>Lecture</span></div><b>Introduction to digital twins</b><span class="who"><a class="person" href="#contact">Javier Argota</a></span><span>Where the idea comes from, why cities are the hard case, and how to tell a model, a shadow and a twin apart. You use this distinction all week.</span><span class="po"><em>Prepare</em>Nothing.</span></div></div>
       <div class="slot t-qa"><p class="slot-when">11:00–11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-qa"><i class="ri-question-answer-line"></i>Q&amp;A</span></div><b>Questions on the lecture</b><span class="who"><a class="person" href="#contact">Javier Argota</a></span><span>Your questions on the lecture, and a short introduction to what you hand in on Friday.</span></div></div>
-      <div class="slot t-work"><p class="slot-when">After 11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Starter-kit check</b><span class="who">On your own, whenever suits you before 15:30</span><span>Any time between the Q&amp;A and Adam's lecture, around your lunch. Open the starter kit on your own laptop and log into your AI assistant. If something does not work, ask at a later session or email <a class="person" href="#contact">Javier</a>.</span><span class="po"><em>Prepare</em>Download the starter kit from <a href="#documents">Documents</a>, then follow the <a href="starter-kit/START-HERE.html" target="_blank" rel="noopener">step-by-step guide</a> (also inside the kit as <code>START-HERE.html</code>). No experience with AI needed. Any AI assistant works; BTH's Copilot licence is enough.</span><span class="po"><em>Output</em>You see the 3D map of Helsingborg and can chat with your AI assistant. If it works, try the <a href="#options">starting examples</a>.</span></div></div>
+      <div class="slot t-work"><p class="slot-when">After 11:30</p><div class="slot-what"><div class="slot-tags"><span class="type t-work"><i class="ri-team-line"></i>Work session</span></div><b>Starter-kit check</b><span class="who">On your own, whenever suits you before 15:30</span><span>Any time between the Q&amp;A and Adam's lecture, around your lunch. Open the starter kit on your own laptop and log into your AI assistant. If something does not work, ask at a later session or email <a class="person" href="#contact">Javier</a>.</span><span class="po"><em>Prepare</em><a href="files/starter-kit/helsingborg-starter-kit.zip" download>Download the starter kit</a> (zip), then follow the <a href="starter-kit/START-HERE.html" target="_blank" rel="noopener">step-by-step guide</a> (also inside the kit as <code>START-HERE.html</code>). No experience with AI needed. Any AI assistant works; BTH's Copilot licence is enough.</span><span class="po"><em>Output</em>You see the 3D map of Helsingborg and can chat with your AI assistant. If it works, try the <a href="#options">starting examples</a>.</span></div></div>
       <div class="slot t-lecture"><p class="slot-when">15:30–17:00</p><div class="slot-what"><div class="slot-tags"><span class="type t-lecture"><i class="ri-slideshow-3-line"></i>Lecture</span></div><b>Municipal digital twins in theory and practice</b><span class="who">Adam Sjödin, co-author of <i>Digital Vision Sverige</i> (2025)</span><span>The national vision for digital twins in Sweden.</span><span class="po"><em>Prepare</em>Nothing. <em>During</em>Note one place where his definition of a twin differs from the morning's.</span></div></div>
     </div>
 
@@ -494,7 +510,7 @@ footer p{margin:0}
 
     <h3><i class="ri-inbox-archive-line"></i>What you hand in</h3>
     <ol class="files">
-      <li><div class="f-head"><span class="tag">File 1 · PDF</span><h5><i class="ri-file-pdf-2-line"></i>The specification</h5></div><p>Sections 1–8, at most 8 pages, plus the annexes, which do not count towards the 8 pages. Annex A: 3–4 screenshots of the mockup. Annex B: the build log.</p><code>DT2026_GroupNN_specification.pdf</code></li>
+      <li><div class="f-head"><span class="tag">File 1 · PDF</span><h5><i class="ri-file-pdf-2-line"></i>The specification</h5></div><p>Sections 1–8, at most 8 pages, plus the annexes, which do not count towards the 8 pages. Annex A: 3–4 screenshots of the mockup. Annex B: the build log.</p><code>DT2026_GroupNN_specification.pdf</code><p><a href="files/templates/requirement-brief-template.docx" download>Download the template</a> (Word), fill it in, export as PDF.</p></li>
       <li><div class="f-head"><span class="tag">File 2 · PDF or PowerPoint</span><h5><i class="ri-presentation-line"></i>The presentation slides</h5></div><p>The slides you use on Friday morning: in person in C533, 12 minutes per group, about 8 minutes of show and tell with a demo of what you built (or failed to build), then about 4 minutes of questions and changeover.</p><code>DT2026_GroupNN_presentation.pdf</code></li>
       <li><div class="f-head"><span class="tag">File 3 · zip</span><h5><i class="ri-folder-zip-line"></i>The code and working files</h5></div><p>The complete mockup folder as you built it (every HTML, JavaScript and data file), so that it opens by double-click on another computer, plus any other working files.</p><code>DT2026_GroupNN_files.zip</code></li>
     </ol>
@@ -503,7 +519,7 @@ footer p{margin:0}
     <div class="note lime"><i class="ri-focus-3-line"></i><p><b>The specification is the main deliverable.</b> The mockup is evidence for it: it may be partly or entirely faked, as long as you say so. Your function must serve a purpose: support a decision, or answer an explicit exploratory question. "Show the city in 3D" is not a purpose. Name the place, the user, the decision or question, and the data.</p></div>
 
     <h3><i class="ri-file-list-3-line"></i>The specification: at most 8 pages, plus annexes</h3>
-    <p>A first draft written before procurement: what the municipality should ask a supplier for, and how it would check the delivery. It does not need to be a legally complete procurement document. Use the template in the starter kit or under <a href="#documents">Documents</a>. Be demanding, above all about data: specify what the municipality should ask for, not only what you managed to build.</p>
+    <p>A first draft written before procurement: what the municipality should ask a supplier for, and how it would check the delivery. It does not need to be a legally complete procurement document. Use the <a href="files/templates/requirement-brief-template.docx" download>specification template</a> (Word). The same file is in the starter kit's <code>docs</code> folder. Be demanding, above all about data: specify what the municipality should ask for, not only what you managed to build.</p>
     <ol class="steps">
       <li><span><b>Purpose and need.</b> What the function is for: the decision it supports, or the question it explores. The planning problem, the place, and the named role whose work changes. Which other departments need the same function.</span></li>
       <li><span><b>Current state.</b> What the municipality has today, and whether that is a model, a shadow or a twin.</span></li>
@@ -533,6 +549,7 @@ footer p{margin:0}
   <div class="sec-head"><div class="sec-num"><i class="ri-stack-line"></i>04</div><h2>Starting examples</h2></div>
   <div class="sec-body">
     <p class="lede">Practice examples to learn the starter kit and the AI assistant. Deliberately basic.</p>
+    <div class="dl-row" style="margin:0 0 1rem"><a class="dl primary" href="files/starter-kit/helsingborg-starter-kit.zip" download><i class="ri-folder-zip-line"></i>Starter kit <small>zip</small></a><a class="dl" href="starter-kit/START-HERE.html#prompts" target="_blank" rel="noopener"><i class="ri-guide-line"></i>Guide and prompts</a></div>
     <p>You can start on Monday, right after the starter-kit check, and continue in Tuesday afternoon's guided vibecoding. Your group's project is your own function, agreed on Wednesday by 14:00. It can grow out of one of these examples, or not, as long as it serves a clear purpose for a named user. Helsingborg is the default case, because we hear from the people who run its model and the kit is built for it.</p>
     <div class="note"><i class="ri-flask-line"></i><p><b>Starting points, not the destination.</b> Each example has a ready-made prompt, with a copy button, in the <a href="starter-kit/START-HERE.html#prompts" target="_blank" rel="noopener">step-by-step guide</a>. Expect to go further than any of them.</p></div>
     <div class="cards">
@@ -843,9 +860,9 @@ footer p{margin:0}
   <div class="sec-body">
     <div class="cards">
       <div class="card"><h5><i class="ri-video-chat-line"></i>Zoom</h5><p>Monday and Tuesday are on Zoom. The links are in Canvas, not on this page. Wednesday to Friday are in person in C533, with no Zoom.</p></div>
-      <div class="card"><h5><i class="ri-download-2-line"></i>Starter kit</h5><p>Download it from Documents and follow the <a href="starter-kit/START-HERE.html" target="_blank" rel="noopener">step-by-step guide</a> on Monday, on your own, any time between the two lectures. If it does not, ask at a later session or email <a class="person" href="#contact">Javier</a>.</p></div>
+      <div class="card"><h5><i class="ri-download-2-line"></i>Starter kit</h5><p><a href="files/starter-kit/helsingborg-starter-kit.zip" download>Download it</a> (zip) and follow the <a href="starter-kit/START-HERE.html" target="_blank" rel="noopener">step-by-step guide</a> on Monday, on your own, any time between the two lectures. If it does not, ask at a later session or email <a class="person" href="#contact">Javier</a>.</p></div>
       <div class="card"><h5><i class="ri-team-line"></i>Groups</h5><p>Groups are already assigned. All work and all files are per group.</p></div>
-      <div class="card"><h5><i class="ri-inbox-archive-line"></i>Hand-in</h5><p>In Canvas, Friday 13 November, 17:00: specification, slides and code, per group. See <a href="#deliverable">Deliverable</a>.</p></div>
+      <div class="card"><h5><i class="ri-inbox-archive-line"></i>Hand-in</h5><p>In Canvas, Friday 13 November, 17:00: specification, slides and code, per group. Write the specification in the <a href="files/templates/requirement-brief-template.docx" download>template</a>. See <a href="#deliverable">Deliverable</a>.</p></div>
       <div class="card" id="contact"><h5><i class="ri-chat-3-line"></i>Contact</h5><p>Javier Argota Sánchez-Vaquerizo<br><a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a></p></div>
     </div>
   </div>
