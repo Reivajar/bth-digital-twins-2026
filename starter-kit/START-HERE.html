@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starter kit guide</title>
+<style>
+:root{
+  --bg:#F1F2EC;--surface:#FFFFFF;--ink:#17123D;--muted:#5D5A7E;--rule:#D6D6E2;
+  --violet:#5531FF;--lime:#CBF53D;--on-lime:#17123D;--soft:#E6E0FF;--warn:#FFF1D6;--warn-line:#C27803;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0E0C26;--surface:#161339;--ink:#EEEDF8;--muted:#A6A3C6;--rule:#2B2856;--violet:#A08BFF;--soft:#221C52;--warn:#3A2A0C;--warn-line:#F5B83D;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0E0C26;--surface:#161339;--ink:#EEEDF8;--muted:#A6A3C6;--rule:#2B2856;--violet:#A08BFF;--soft:#221C52;--warn:#3A2A0C;--warn-line:#F5B83D;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 2rem 4rem}
+@media (max-width:640px){.wrap{padding:0 1rem 3rem}}
+a{color:var(--violet);text-underline-offset:3px}
+header{padding:2.5rem 0 1.5rem;border-bottom:2px solid var(--ink);margin-bottom:2rem}
+header .kicker{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 1rem}
+h2{font-size:1.5rem;letter-spacing:-.02em;margin:0 0 .75rem;display:flex;gap:.75rem;align-items:baseline}
+h2 .n{flex:none;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--lime);color:var(--on-lime);display:inline-grid;place-items:center;font-size:1rem;font-weight:800;transform:translateY(-.15rem)}
+h3{font-size:1.05rem;margin:1.25rem 0 .4rem}
+p,li{max-width:66ch}
+ol,ul{padding-left:1.3rem}
+li{margin-bottom:.4rem}
+.lede{font-size:1.15rem;font-weight:500;margin:0 0 1rem}
+.need{display:grid;grid-template-columns:repeat(auto-fill,minmax(11rem,1fr));gap:.75rem;margin:1rem 0 0;padding:0;list-style:none}
+.need li{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:.75rem .9rem;margin:0;font-size:.95rem;line-height:1.35}
+.need b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.5rem 0 0}
+.toc a{font-size:.85rem;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:99px;padding:.2rem .7rem}
+section.step{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:1.5rem 1.5rem 1rem;margin:0 0 1.25rem}
+@media (max-width:640px){section.step{padding:1.1rem 1rem .75rem}}
+.os{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:.75rem 0 1rem}
+@media (max-width:640px){.os{grid-template-columns:1fr}}
+.os > div{border:1px solid var(--rule);border-radius:12px;padding:.8rem 1rem;background:var(--bg)}
+.os h4{margin:0 0 .4rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.os ol{margin:0;padding-left:1.2rem}
+.check{background:var(--soft);border-radius:12px;padding:.8rem 1rem;margin:.75rem 0 1rem}
+.check b{color:var(--violet)}
+.warn{background:var(--warn);border-left:4px solid var(--warn-line);border-radius:0 12px 12px 0;padding:.8rem 1rem;margin:.75rem 0 1rem}
+kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82em;background:var(--bg);border:1px solid var(--rule);border-bottom-width:2px;border-radius:5px;padding:.05rem .35rem;white-space:nowrap}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88em;background:var(--bg);border:1px solid var(--rule);border-radius:5px;padding:.05rem .3rem}
+.prompt{position:relative;border:2px solid var(--ink);border-radius:12px;margin:.6rem 0 1rem;background:var(--bg)}
+.prompt .label{display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.45rem .5rem .45rem .9rem;border-bottom:1px solid var(--rule);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.prompt pre{margin:0;padding:.8rem .9rem;white-space:pre-wrap;word-wrap:break-word;font-family:inherit;font-size:.95rem;line-height:1.5}
+.copy{font:inherit;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;background:var(--ink);color:var(--bg);border:0;border-radius:99px;padding:.35rem .8rem}
+.copy.done{background:var(--lime);color:var(--on-lime)}
+.copy:focus-visible,.toc a:focus-visible,summary:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+details{border-top:1px solid var(--rule);padding:.6rem 0}
+details:last-of-type{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.95rem;margin:.5rem 0 1rem}
+th,td{text-align:left;vertical-align:top;padding:.6rem .75rem .6rem 0;border-bottom:1px solid var(--rule)}
+th{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink)}
+.loop{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin:1rem 0;padding:0;list-style:none;counter-reset:l}
+.loop li{counter-increment:l;margin:0;background:var(--bg);border:1px solid var(--rule);border-radius:12px;padding:.6rem .7rem;font-size:.88rem;line-height:1.3}
+.loop li::before{content:counter(l);display:block;font-weight:800;color:var(--violet);font-size:1.3rem}
+@media (max-width:760px){.loop{grid-template-columns:1fr 1fr}}
+footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">Helsingborg starter kit · BTH digital twins module</p>
+  <h1>Start here: your first change with AI, step by step</h1>
+  <p class="lede">You do not need to know how to code, or to have used an AI assistant before. Follow the steps in order. The first time takes about 30 minutes.</p>
+  <ul class="need">
+    <li><b>You need</b>Your own laptop, Windows or Mac</li>
+    <li><b>Browser</b>Chrome or Edge (Safari and Firefox may also work)</li>
+    <li><b>AI assistant</b>Copilot with your BTH account, or another one you like</li>
+    <li><b>Internet</b>Only for the AI chat. The map works offline</li>
+  </ul>
+  <nav class="toc" aria-label="Steps">
+    <a href="#s1">1 Unzip</a><a href="#s2">2 Open the map</a><a href="#s3">3 See file endings</a><a href="#s4">4 Open the AI</a><a href="#s5">5 First change</a><a href="#s6">6 Keep going</a><a href="#s7">7 When it breaks</a><a href="#prompts">Prompts</a>
+  </nav>
+</header>
+
+<section class="step" id="s1">
+  <h2><span class="n">1</span>Unzip the kit</h2>
+  <p>You downloaded a file called <code>helsingborg-starter-kit.zip</code>. A zip file is a packed folder. You have to unpack it before anything works.</p>
+  <div class="os">
+    <div><h4>Windows</h4><ol>
+      <li>Open your <b>Downloads</b> folder.</li>
+      <li>Right-click <code>helsingborg-starter-kit.zip</code> and choose <b>Extract All…</b>, then <b>Extract</b>.</li>
+      <li>A normal folder called <code>helsingborg-starter-kit</code> appears. Move it to your Desktop.</li>
+    </ol></div>
+    <div><h4>Mac</h4><ol>
+      <li>Open your <b>Downloads</b> folder in Finder.</li>
+      <li>Double-click <code>helsingborg-starter-kit.zip</code>.</li>
+      <li>A normal folder called <code>helsingborg-starter-kit</code> appears. Move it to your Desktop.</li>
+    </ol></div>
+  </div>
+  <div class="warn"><b>Do not work inside the zip.</b> If you open files directly from the zip, the map stays blank and nothing you save is kept. Always work in the unpacked folder.</div>
+  <p>Inside the folder you see <code>index.html</code> (the map), this guide, and the folders <code>data</code>, <code>lib</code> and <code>docs</code>. Never move or rename those folders: the map needs them next to it.</p>
+</section>
+
+<section class="step" id="s2">
+  <h2><span class="n">2</span>Open the map</h2>
+  <ol>
+    <li>Double-click <code>index.html</code>. It opens in your web browser.</li>
+    <li>If it opens in a text editor instead (lots of code), close it. Right-click the file, choose <b>Open with</b>, then Chrome or Edge.</li>
+  </ol>
+  <div class="check"><b>Check:</b> you see 3D buildings of central Helsingborg, and a panel with a slider. Move the slider: the number under <b>Result</b> changes. Click a building: its details appear under <b>Selected building</b>. To tilt or turn the map, hold the right mouse button and drag (on a trackpad, hold <kbd>Ctrl</kbd> and drag).</div>
+  <p>If the page is blank, see <a href="#s7">When it breaks</a>. If it still does not work, email Javier. You can carry on with the next steps anyway.</p>
+</section>
+
+<section class="step" id="s3">
+  <h2><span class="n">3</span>Make file endings visible</h2>
+  <p>File names have an ending after the dot, such as <code>.html</code> or <code>.txt</code>. Your computer usually hides it, and that causes the most common mistake: saving <code>v1.html.txt</code> by accident. Turn the endings on once.</p>
+  <div class="os">
+    <div><h4>Windows 11</h4><ol>
+      <li>Open any folder (File Explorer).</li>
+      <li>Click <b>View</b>, then <b>Show</b>, then tick <b>File name extensions</b>.</li>
+    </ol></div>
+    <div><h4>Mac</h4><ol>
+      <li>Click on the desktop so Finder is active.</li>
+      <li>Menu <b>Finder</b>, then <b>Settings</b>, then <b>Advanced</b>. Tick <b>Show all filename extensions</b>.</li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="step" id="s4">
+  <h2><span class="n">4</span>Open your AI assistant</h2>
+  <p>An AI assistant is a chat: you type a request in plain English, and it writes an answer, including code. Any assistant works. BTH students have Copilot through their university account.</p>
+  <h3>Copilot with your BTH account</h3>
+  <ol>
+    <li>In Chrome or Edge, go to <a href="https://m365.cloud.microsoft/chat" target="_blank" rel="noopener">m365.cloud.microsoft/chat</a>. If BTH has given you a different Copilot link, use that one.</li>
+    <li>Sign in with your BTH student account, the same one you use for email and Canvas.</li>
+    <li>Check that your BTH account is shown at the top right, so you use BTH's licence and not a private account.</li>
+  </ol>
+  <h3>Or another assistant</h3>
+  <p>Claude (<a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>) or ChatGPT (<a href="https://chatgpt.com" target="_blank" rel="noopener">chatgpt.com</a>) also work, with a free account. The steps below are the same.</p>
+  <div class="check"><b>Words you will see:</b> a <b>prompt</b> is the message you type. A <b>new chat</b> starts a conversation from scratch (button at the top or side). <b>Attach</b> (a paperclip or <b>+</b> next to the message box) sends a file along with your message.</div>
+</section>
+
+<section class="step" id="s5">
+  <h2><span class="n">5</span>Your first change</h2>
+  <p>You will ask the AI to change the map, save its answer as a new file, and open it. One round looks like this:</p>
+  <ol class="loop">
+    <li>Attach your latest file</li>
+    <li>Say what to change</li>
+    <li>Copy the code it returns</li>
+    <li>Save it as the next number</li>
+    <li>Double-click to check</li>
+  </ol>
+
+  <h3>a. Start a new chat and give it the context</h3>
+  <p>Click <b>New chat</b>. Copy the text below with the button, paste it into the message box (<kbd>Ctrl</kbd>+<kbd>V</kbd> on Windows, <kbd>Cmd</kbd>+<kbd>V</kbd> on Mac), but <b>do not send yet</b>.</p>
+  <div class="prompt"><div class="label">Context, once at the start of every new chat<button class="copy" type="button">Copy</button></div><pre>I am an urban planning student, not a programmer. I am changing a web page that shows a 3D map of Helsingborg with MapLibre GL JS. The page loads its data from local JavaScript files that I must not change. The buildings are in a GeoJSON variable called BUILDINGS. Each building has these properties: id, height_m (number), height_source (text), floors (number or null), use (text), ground_m (number, ground elevation in metres above sea level, approximate), model_checked (year, a number), source (text). There is also WATER and PARKS. Keep the page working by double-clicking the file, with no server and no new libraries from the internet. Keep the panel section "What this does not show" and keep my comments. Always return the complete file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, not a fragment.</pre></div>
+
+  <h3>b. Attach the map file</h3>
+  <p>Click the paperclip or <b>+</b> next to the message box and choose <code>index.html</code> from your kit folder on the Desktop. Attach only this one file.</p>
+  <div class="warn"><b>Never attach or paste the files in the <code>data</code> folder.</b> They hold thousands of buildings and are far too large for a chat. The AI only needs to know what one building looks like, and the context text above already tells it.</div>
+  <details>
+    <summary>My assistant has no attach button</summary>
+    <p>Then paste the code instead. Open <code>index.html</code> in a plain text editor (see step d for how), select everything with <kbd>Ctrl</kbd>+<kbd>A</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>A</kbd>), copy, and paste it into the message box under the context text. If the chat says the message is too long, try another assistant.</p>
+  </details>
+
+  <h3>c. Say what to change, then send</h3>
+  <p>Under the context, paste this first exercise and press <b>Enter</b> or the send arrow.</p>
+  <div class="prompt"><div class="label">First exercise<button class="copy" type="button">Copy</button></div><pre>Change the slider so it highlights buildings lower than the chosen height instead of taller. Update the text in the panel to match.</pre></div>
+  <p>Wait until the answer has finished. It contains a long block of code, usually in a grey box with its own <b>Copy</b> button.</p>
+  <div class="check"><b>Check the answer is complete:</b> scroll to the end of the code box. It must end with <code>&lt;/html&gt;</code>. If it stops in the middle, or says something like "rest of the code unchanged", reply: <i>"Give me the complete file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out."</i></div>
+
+  <h3>d. Save the answer as a new file, v1.html</h3>
+  <p>Click the <b>Copy</b> button on the code box. Then save it in your kit folder, next to <code>index.html</code>. Do not overwrite <code>index.html</code>: it stays as your safe original.</p>
+  <div class="os">
+    <div><h4>Windows: Notepad</h4><ol>
+      <li>Open <b>Notepad</b> (search for it in the Start menu).</li>
+      <li>Paste with <kbd>Ctrl</kbd>+<kbd>V</kbd>.</li>
+      <li><b>File</b>, then <b>Save as</b>. Go to the kit folder on your Desktop.</li>
+      <li>Set <b>Save as type</b> to <b>All files</b>, type the name <code>v1.html</code>, and keep the encoding <b>UTF-8</b>. Click <b>Save</b>.</li>
+    </ol></div>
+    <div><h4>Mac: TextEdit</h4><ol>
+      <li>Open <b>TextEdit</b> and choose <b>New Document</b>.</li>
+      <li>Menu <b>Format</b>, then <b>Make Plain Text</b>. This step matters.</li>
+      <li>Paste with <kbd>Cmd</kbd>+<kbd>V</kbd>.</li>
+      <li><b>File</b>, then <b>Save</b>. Name it <code>v1.html</code>, choose the kit folder, encoding <b>UTF-8</b>. If asked, choose <b>Use .html</b>.</li>
+    </ol></div>
+  </div>
+  <p>If you already use VS Code or another code editor, that works too: new file, paste, save as <code>v1.html</code> in the kit folder.</p>
+
+  <h3>e. Open it and check</h3>
+  <p>Double-click <code>v1.html</code>. Move the slider: it should now highlight the lower buildings.</p>
+  <div class="check"><b>It works?</b> Well done: that is the whole method. Write one line in your group's build log: what you asked, what happened, and that it became <code>v1.html</code>.</div>
+</section>
+
+<section class="step" id="s6">
+  <h2><span class="n">6</span>Keep going: one change per round</h2>
+  <ol>
+    <li>In the same chat, attach your <b>latest working file</b> (now <code>v1.html</code>) and ask for the next change.</li>
+    <li>Save each answer under the next number: <code>v2.html</code>, <code>v3.html</code>, and so on, always in the kit folder.</li>
+    <li>Ask for <b>one change at a time</b>, in concrete words: "add a slider from 0 to 5 m", not "make it better".</li>
+    <li>If the chat gets long and the AI starts forgetting things, start a new chat: paste the context again and attach your latest file.</li>
+    <li>Take turns at the keyboard in your group, and log every round.</li>
+  </ol>
+  <p>Try breaking it on purpose once: ask for something vague, such as "make it look better", and see what happens. Then go back to your last good number.</p>
+  <p>When you are ready, use the <a href="#prompts">starting prompts</a> below.</p>
+</section>
+
+<section class="step" id="s7">
+  <h2><span class="n">7</span>When it breaks</h2>
+  <p>It will break. That is normal, and what went wrong is useful for your specification.</p>
+  <table>
+    <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td>A blank page</td><td>Press <kbd>F12</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd>) to open the console. Copy the red error message, paste it into the chat and ask: "Fix this error. Give me the complete file."</td></tr>
+      <tr><td>The file opens as text, not as a map</td><td>It was saved as <code>.txt</code> or as rich text. Check that the name ends in <code>.html</code> (step 3), and on Mac that you chose <b>Make Plain Text</b>. Save it again.</td></tr>
+      <tr><td>The map works but the buildings are missing</td><td>The file is not in the kit folder, next to the <code>data</code> folder. Move it there.</td></tr>
+      <tr><td>The answer stops halfway</td><td>Reply: "Give me the complete file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out."</td></tr>
+      <tr><td>You changed something and do not like it</td><td>Nothing is lost. Open the previous number (<code>v2.html</code>, say) and continue from there.</td></tr>
+      <tr><td>Still broken after two tries</td><td>Go back to your last working number. Ask another group. Then email Javier.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="step" id="prompts">
+  <h2><span class="n">★</span>Starting prompts</h2>
+  <p>Basic examples to learn with. Each replaces the worked example on the map. Start a round with one of these, then change the words in [brackets] to make it yours. Your group's own function, agreed on Wednesday, can grow out of one of them, or not.</p>
+
+  <h3>A. Sea level and buildings</h3>
+  <div class="prompt"><div class="label">Prompt A<button class="copy" type="button">Copy</button></div><pre>Replace the height function with a sea-level function. Add a slider for water level from 0 to 5 metres in steps of 0.25. Colour buildings whose ground_m is below the chosen level blue and all others light grey. Show the number of affected buildings in the Result section. Update the Function text to: "The tool shall show which buildings stand on ground below a user-selected water level."</pre></div>
+  <p>What you will find: <code>ground_m</code> comes from a coarse 30 m grid that partly includes rooftops. Look at which buildings it gets wrong. That is a data finding for your specification.</p>
+
+  <h3>B. Where the model is out of date</h3>
+  <div class="prompt"><div class="label">Prompt B<button class="copy" type="button">Copy</button></div><pre>Replace the height function with a model-currency function. Colour buildings by model_checked: before 2015 dark red, 2015 to 2019 orange, 2020 or later green. Add a slider "Show buildings not checked since [year]" from 2010 to 2026. Show the number of buildings not checked since the chosen year. Update the Function text to: "The tool shall show which parts of the city model have not been checked against reality since a user-selected year."</pre></div>
+  <p>What you will find: <code>model_checked</code> is invented. No public data says when each building in Helsingborg's model was last updated. Your specification has to say who would record it, and how.</p>
+
+  <h3>C. Massing sketch</h3>
+  <div class="prompt"><div class="label">Prompt C<button class="copy" type="button">Copy</button></div><pre>Add a sketch tool. When I click "Start drawing", each click on the map adds a corner of a new building footprint, and "Finish" closes the shape. Add a number box for height in metres. Show the new building in 3D in a bright blue colour among the existing buildings. In the Result section, show the height of the tallest existing building within 50 metres of the new one, and the difference.</pre></div>
+  <p>What you will find: many neighbour heights are estimated. Click them to see <code>height_source</code>. A height comparison is only as good as that field.</p>
+
+  <h3>Your own function</h3>
+  <p>Write your function as one sentence starting with "The tool shall". Then:</p>
+  <div class="prompt"><div class="label">Your own<button class="copy" type="button">Copy</button></div><pre>Replace the height function with this: [your sentence]. Use these fields: [fields from the list in the context]. Keep everything else on the page.</pre></div>
+  <p>If no field in the data supports your function, that is a finding. Ask the AI to create clearly labelled invented data, and say so in Annex A of your specification.</p>
+</section>
+
+<footer>
+  <p>More about the data: <code>docs/DATA.md</code>. Questions: Javier Argota Sánchez-Vaquerizo, <a href="mailto:javier.argota@gess.ethz.ch">javier.argota@gess.ethz.ch</a>.</p>
+</footer>
+
+</div>
+<script>
+document.querySelectorAll(".prompt .copy").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var text = btn.closest(".prompt").querySelector("pre").innerText;
+    function ok(){ btn.textContent = "Copied"; btn.classList.add("done"); setTimeout(function(){ btn.textContent = "Copy"; btn.classList.remove("done"); }, 1800); }
+    function fallback(){
+      var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); ok(); } catch(e) { btn.textContent = "Select and copy"; }
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(ok, fallback); } else { fallback(); }
+  });
+});
+</script>
+</body>
+</html>
