@@ -147,14 +147,14 @@ footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
   <ol class="loop">
     <li>Attach your latest file</li>
     <li>Say what to change</li>
-    <li>Copy the code it returns</li>
+    <li>Download or copy the file it returns</li>
     <li>Save it as the next number</li>
     <li>Double-click to check</li>
   </ol>
 
   <h3>a. Start a new chat and give it the context</h3>
   <p>Click <b>New chat</b>. Copy the text below with the button, paste it into the message box (<kbd>Ctrl</kbd>+<kbd>V</kbd> on Windows, <kbd>Cmd</kbd>+<kbd>V</kbd> on Mac), but <b>do not send yet</b>.</p>
-  <div class="prompt"><div class="label">Context, once at the start of every new chat<button class="copy" type="button">Copy</button></div><pre>I am an urban planning student, not a programmer. I am changing a web page that shows a 3D map of Helsingborg with MapLibre GL JS. The page loads its data from local JavaScript files that I must not change. The buildings are in a GeoJSON variable called BUILDINGS. Each building has these properties: id, height_m (number), height_source (text), floors (number or null), use (text), ground_m (number, ground elevation in metres above sea level, approximate), model_checked (year, a number), source (text). There is also WATER and PARKS. Keep the page working by double-clicking the file, with no server and no new libraries from the internet. Keep the panel section "What this does not show" and keep my comments. Always return the complete file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, not a fragment.</pre></div>
+  <div class="prompt"><div class="label">Context, once at the start of every new chat<button class="copy" type="button">Copy</button></div><pre>I am an urban planning student, not a programmer. I am changing a web page that shows a 3D map of Helsingborg with MapLibre GL JS. The page loads its data from local JavaScript files that I must not change. The buildings are in a GeoJSON variable called BUILDINGS. Each building has these properties: id, height_m (number), height_source (text), floors (number or null), use (text), ground_m (number, ground elevation in metres above sea level, approximate), model_checked (year, a number), source (text). There is also WATER and PARKS. Keep the page working by double-clicking the file, with no server and no new libraries from the internet. Keep the panel section "What this does not show" and keep my comments. Every time, return the entire file as a downloadable .html file, and also show the complete code in one code block, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;. Never return only the changed part.</pre></div>
 
   <h3>b. Attach the map file</h3>
   <p>Click the paperclip or <b>+</b> next to the message box and choose <code>index.html</code> from your kit folder on the Desktop. Attach only this one file.</p>
@@ -166,12 +166,14 @@ footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
 
   <h3>c. Say what to change, then send</h3>
   <p>Under the context, paste this first exercise and press <b>Enter</b> or the send arrow.</p>
-  <div class="prompt"><div class="label">First exercise<button class="copy" type="button">Copy</button></div><pre>Change the slider so it highlights buildings lower than the chosen height instead of taller. Update the text in the panel to match.</pre></div>
-  <p>Wait until the answer has finished. It contains a long block of code, usually in a grey box with its own <b>Copy</b> button.</p>
-  <div class="check"><b>Check the answer is complete:</b> scroll to the end of the code box. It must end with <code>&lt;/html&gt;</code>. If it stops in the middle, or says something like "rest of the code unchanged", reply: <i>"Give me the complete file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out."</i></div>
+  <div class="prompt"><div class="label">First exercise<button class="copy" type="button">Copy</button></div><pre>Change the slider so it highlights buildings lower than the chosen height instead of taller. Update the text in the panel to match. Return the entire updated file as a downloadable file named v1.html. Also show the complete code in one code block, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out.</pre></div>
+  <p>Wait until the answer has finished. Depending on the assistant, you get a <b>download link</b> or file card, a long block of code in a grey box with its own <b>Copy</b> button, or both.</p>
+  <div class="check"><b>Check the answer is complete:</b> scroll to the end of the code box (or open the downloaded file in your text editor). It must end with <code>&lt;/html&gt;</code>. If it stops in the middle, or says something like "rest of the code unchanged", reply: <i>"Give me the complete file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out."</i></div>
 
   <h3>d. Save the answer as a new file, v1.html</h3>
-  <p>Click the <b>Copy</b> button on the code box. Then save it in your kit folder, next to <code>index.html</code>. Do not overwrite <code>index.html</code>: it stays as your safe original.</p>
+  <p>Whichever way you get it, the file must end up in your kit folder, next to <code>index.html</code>, named <code>v1.html</code>. Do not overwrite <code>index.html</code>: it stays as your safe original.</p>
+  <p><b>If there is a download link:</b> click it. The file usually lands in your Downloads folder. Move it into the kit folder and check that its name ends in <code>.html</code> (rename it <code>v1.html</code> if needed). A file left in Downloads shows the map without buildings.</p>
+  <p><b>If there is only code, or the download does not work:</b> click the <b>Copy</b> button on the code box and paste it into a new file with a plain text editor:</p>
   <div class="os">
     <div><h4>Windows: Notepad</h4><ol>
       <li>Open <b>Notepad</b> (search for it in the Start menu).</li>
@@ -197,7 +199,7 @@ footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
   <h2><span class="n">6</span>Keep going: one change per round</h2>
   <ol>
     <li>In the same chat, attach your <b>latest working file</b> (now <code>v1.html</code>) and ask for the next change.</li>
-    <li>Save each answer under the next number: <code>v2.html</code>, <code>v3.html</code>, and so on, always in the kit folder.</li>
+    <li>Save each answer under the next number: <code>v2.html</code>, <code>v3.html</code>, and so on, always in the kit folder. In the prompt, change the file name in [brackets], such as <code>[v2]</code>, to your next number.</li>
     <li>Ask for <b>one change at a time</b>, in concrete words: "add a slider from 0 to 5 m", not "make it better".</li>
     <li>If the chat gets long and the AI starts forgetting things, start a new chat: paste the context again and attach your latest file.</li>
     <li>Take turns at the keyboard in your group, and log every round.</li>
@@ -209,13 +211,23 @@ footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
 <section class="step" id="s7">
   <h2><span class="n">7</span>When it breaks</h2>
   <p>It will break. That is normal, and what went wrong is useful for your specification.</p>
+  <h3>The AI does not give you the file you asked for</h3>
+  <p>Sometimes the assistant misbehaves: it returns only a piece of the code, says "the rest stays the same", describes the change in words, or promises a file and never makes one. Sorry: some AI tools are simply clumsy at this. It is not your fault. Try these, in this order:</p>
+  <ol>
+    <li><b>Copy and paste it yourself.</b> If the full code is in the answer, copy it and paste it into a new file in Notepad (Windows) or TextEdit in plain text mode (Mac), then save it as <code>v1.html</code> in the kit folder. See step 5d.</li>
+    <li><b>Repeat the instruction.</b> Reply: <i>"Give me the entire file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out."</i></li>
+    <li><b>Ask for a link.</b> Reply: <i>"Create the complete file as a downloadable .html file and give me the link."</i></li>
+    <li><b>Say the goal more clearly.</b> A vague request gets a vague answer. Say what the user should see and do, which field to use, and what must not change.</li>
+    <li><b>Start again.</b> Open a new chat, paste the context again and attach your latest working file. If it still fails, try another assistant.</li>
+  </ol>
+  <p>Note in your build log which of these you needed. It tells you something about the tool.</p>
   <table>
     <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
     <tbody>
       <tr><td>A blank page</td><td>Press <kbd>F12</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd>) to open the console. Copy the red error message, paste it into the chat and ask: "Fix this error. Give me the complete file."</td></tr>
       <tr><td>The file opens as text, not as a map</td><td>It was saved as <code>.txt</code> or as rich text. Check that the name ends in <code>.html</code> (step 3), and on Mac that you chose <b>Make Plain Text</b>. Save it again.</td></tr>
-      <tr><td>The map works but the buildings are missing</td><td>The file is not in the kit folder, next to the <code>data</code> folder. Move it there.</td></tr>
-      <tr><td>The answer stops halfway</td><td>Reply: "Give me the complete file, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out."</td></tr>
+      <tr><td>The map works but the buildings are missing</td><td>The file is not in the kit folder, next to the <code>data</code> folder. A downloaded file is often still in Downloads. Move it there.</td></tr>
+      <tr><td>The answer stops halfway, or there is no file</td><td>See <a href="#s7">the list above</a>: paste the code yourself, repeat the request, or ask for a download link.</td></tr>
       <tr><td>You changed something and do not like it</td><td>Nothing is lost. Open the previous number (<code>v2.html</code>, say) and continue from there.</td></tr>
       <tr><td>Still broken after two tries</td><td>Go back to your last working number. Ask another group. Then email Javier.</td></tr>
     </tbody>
@@ -227,20 +239,20 @@ footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
   <p>Basic examples to learn with. Each replaces the worked example on the map. Start a round with one of these, then change the words in [brackets] to make it yours. Your group's own function, agreed on Wednesday, can grow out of one of them, or not.</p>
 
   <h3>A. Sea level and buildings</h3>
-  <div class="prompt"><div class="label">Prompt A<button class="copy" type="button">Copy</button></div><pre>Replace the height function with a sea-level function. Add a slider for water level from 0 to 5 metres in steps of 0.25. Colour buildings whose ground_m is below the chosen level blue and all others light grey. Show the number of affected buildings in the Result section. Update the Function text to: "The tool shall show which buildings stand on ground below a user-selected water level."</pre></div>
+  <div class="prompt"><div class="label">Prompt A<button class="copy" type="button">Copy</button></div><pre>Replace the height function with a sea-level function. Add a slider for water level from 0 to 5 metres in steps of 0.25. Colour buildings whose ground_m is below the chosen level blue and all others light grey. Show the number of affected buildings in the Result section. Update the Function text to: "The tool shall show which buildings stand on ground below a user-selected water level." Return the entire updated file as a downloadable file named [v2].html. Also show the complete code in one code block, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out.</pre></div>
   <p>What you will find: <code>ground_m</code> comes from a coarse 30 m grid that partly includes rooftops. Look at which buildings it gets wrong. That is a data finding for your specification.</p>
 
   <h3>B. Where the model is out of date</h3>
-  <div class="prompt"><div class="label">Prompt B<button class="copy" type="button">Copy</button></div><pre>Replace the height function with a model-currency function. Colour buildings by model_checked: before 2015 dark red, 2015 to 2019 orange, 2020 or later green. Add a slider "Show buildings not checked since [year]" from 2010 to 2026. Show the number of buildings not checked since the chosen year. Update the Function text to: "The tool shall show which parts of the city model have not been checked against reality since a user-selected year."</pre></div>
+  <div class="prompt"><div class="label">Prompt B<button class="copy" type="button">Copy</button></div><pre>Replace the height function with a model-currency function. Colour buildings by model_checked: before 2015 dark red, 2015 to 2019 orange, 2020 or later green. Add a slider "Show buildings not checked since [year]" from 2010 to 2026. Show the number of buildings not checked since the chosen year. Update the Function text to: "The tool shall show which parts of the city model have not been checked against reality since a user-selected year." Return the entire updated file as a downloadable file named [v2].html. Also show the complete code in one code block, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out.</pre></div>
   <p>What you will find: <code>model_checked</code> is invented. No public data says when each building in Helsingborg's model was last updated. Your specification has to say who would record it, and how.</p>
 
   <h3>C. Massing sketch</h3>
-  <div class="prompt"><div class="label">Prompt C<button class="copy" type="button">Copy</button></div><pre>Add a sketch tool. When I click "Start drawing", each click on the map adds a corner of a new building footprint, and "Finish" closes the shape. Add a number box for height in metres. Show the new building in 3D in a bright blue colour among the existing buildings. In the Result section, show the height of the tallest existing building within 50 metres of the new one, and the difference.</pre></div>
+  <div class="prompt"><div class="label">Prompt C<button class="copy" type="button">Copy</button></div><pre>Add a sketch tool. When I click "Start drawing", each click on the map adds a corner of a new building footprint, and "Finish" closes the shape. Add a number box for height in metres. Show the new building in 3D in a bright blue colour among the existing buildings. In the Result section, show the height of the tallest existing building within 50 metres of the new one, and the difference. Return the entire updated file as a downloadable file named [v2].html. Also show the complete code in one code block, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out.</pre></div>
   <p>What you will find: many neighbour heights are estimated. Click them to see <code>height_source</code>. A height comparison is only as good as that field.</p>
 
   <h3>Your own function</h3>
   <p>Write your function as one sentence starting with "The tool shall". Then:</p>
-  <div class="prompt"><div class="label">Your own<button class="copy" type="button">Copy</button></div><pre>Replace the height function with this: [your sentence]. Use these fields: [fields from the list in the context]. Keep everything else on the page.</pre></div>
+  <div class="prompt"><div class="label">Your own<button class="copy" type="button">Copy</button></div><pre>Replace the height function with this: [your sentence]. Use these fields: [fields from the list in the context]. Keep everything else on the page. Return the entire updated file as a downloadable file named [v2].html. Also show the complete code in one code block, from &lt;!DOCTYPE html&gt; to &lt;/html&gt;, with nothing left out.</pre></div>
   <p>If no field in the data supports your function, that is a finding. Ask the AI to create clearly labelled invented data, and say so in Annex A of your specification.</p>
 </section>
 
