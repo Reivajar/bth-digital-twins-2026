@@ -148,9 +148,10 @@ footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
     <li>Attach your latest file</li>
     <li>Say what to change</li>
     <li>Download or copy the file it returns</li>
-    <li>Save it as the next number</li>
+    <li>Save it in the kit folder as the next number</li>
     <li>Double-click to check</li>
   </ol>
+  <div class="warn"><b>One folder for everything.</b> Every file you save or download goes in your unzipped kit folder, next to <code>index.html</code> and the <code>lib</code> and <code>data</code> folders. Not in Downloads, not on the Desktop, not inside the zip. The map only works there, because it loads the map library from <code>lib</code> and the buildings from <code>data</code>.<br><br><b>Do not use the chat's Preview or Run button.</b> The preview cannot see those folders, so the map fails there even when the code is right. Always save the file and double-click it.</div>
 
   <h3>a. Start a new chat and give it the context</h3>
   <p>Click <b>New chat</b>. Copy the text below with the button, paste it into the message box (<kbd>Ctrl</kbd>+<kbd>V</kbd> on Windows, <kbd>Cmd</kbd>+<kbd>V</kbd> on Mac), but <b>do not send yet</b>.</p>
@@ -226,6 +227,7 @@ footer{color:var(--muted);font-size:.88rem;margin-top:2rem}
     <tbody>
       <tr><td>A blank page</td><td>Press <kbd>F12</kbd> (Mac: <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd>) to open the console. Copy the red error message, paste it into the chat and ask: "Fix this error. Give me the complete file."</td></tr>
       <tr><td>The file opens as text, not as a map</td><td>It was saved as <code>.txt</code> or as rich text. Check that the name ends in <code>.html</code> (step 3), and on Mac that you chose <b>Make Plain Text</b>. Save it again.</td></tr>
+      <tr><td>Error <code>maplibregl is not defined</code>, often with <code>about:srcdoc</code>, or a blank map</td><td>You are looking at the chat's preview, or the file is outside the kit folder. Save it in the kit folder next to <code>lib</code> and <code>data</code>, then double-click it. If it still fails, ask the AI to put back the line that loads <code>lib/maplibre-gl.js</code>.</td></tr>
       <tr><td>The map works but the buildings are missing</td><td>The file is not in the kit folder, next to the <code>data</code> folder. A downloaded file is often still in Downloads. Move it there.</td></tr>
       <tr><td>The answer stops halfway, or there is no file</td><td>See <a href="#s7">the list above</a>: paste the code yourself, repeat the request, or ask for a download link.</td></tr>
       <tr><td>You changed something and do not like it</td><td>Nothing is lost. Open the previous number (<code>v2.html</code>, say) and continue from there.</td></tr>
